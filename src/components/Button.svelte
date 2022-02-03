@@ -1,11 +1,13 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
+import { prevent_default } from 'svelte/internal';
     export let name:String = '';
     export let label:String = '';
     export let url:string = '';
 
-    function handleClick() {
-        goto(url)
+    function handleClick(e) {
+        e.preventDefault();
+        goto(url);
     }
 </script>
 
