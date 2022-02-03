@@ -2,55 +2,44 @@
     export let name:String = '';
     export let label:String = '';
     export let url:string = '';
-
-    let hovering;
-
-	function enter() {
-		hovering = true;
-	}
-
-	function leave() {
-		hovering = false;
-	}
 </script>
 
-<a on:mouseenter={enter} on:mouseleave={leave}
-href={url} 
-class="button">
-    <div class="icon-image">
-        <div class="svg-wrap">
-            <svg class="icon">
+<a
+    href={url} 
+    class="button">
+        <div class="icon-image">
+            <svg class="icon line">
                 <use href="icons.svg#{name}-line"></use>
             </svg>
-            <svg class="icon">
+            <svg class="icon filled">
                 <use href="icons.svg#{name}-filled"></use>
             </svg>
         </div>
-    </div>
     {label}
 </a>
 
 <style>
-    .icon-image {
-        height:24px;
-        width:24px;
+    /* .icon-image {
+        height:1.5rem;
+        width:1.5rem;
         position: relative;
         display:inline-block;
-        overflow: hidden;
         margin-right: .5em
     }
-    .svg-wrap {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        position:absolute;
+    .icon-image svg {
         top:0;
         left:0;
-        /* transition: top 300ms cubic-bezier(0.175, 0.885, 0.32, 1); */
+    } */
+    .icon-image {
+        position: relative;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: .5rem;
     }
-    .button:hover .svg-wrap {
-        top:-24px;
+    .icon {
+        position: absolute;
+        top:0;
+        left:0;
     }
     .button {
         display: inline-flex;
@@ -68,7 +57,7 @@ class="button">
         letter-spacing: -0.02em;
         text-decoration: none;
         color: var(--accent);
-        /* transition: background-color 150ms ease-in-out, border-color 150ms ease-in-out, color 150ms ease-in-out; */
+        transition: background-color 100ms linear, border-color 100ms linear, color 100ms linear;
     }
     .button:hover {
         background: var(--accent);
@@ -79,6 +68,27 @@ class="button">
         width: 1.5rem;
         height: 1.5rem;
         margin-right: 0.5rem; 
+    }
+    .filled {
+        opacity:0;
+        transform: scale(.2);
+        transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 200ms linear;
+        /* transition-delay: 200ms; */
+    }
+    
+    .line {
+        opacity: 1;
+        transform: scale(1);
+        transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 200ms linear;
+    }
+    .button:hover .filled {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .button:hover .line {
+        opacity:0;
+        transform: scale(.2);
     }
     </style>
     

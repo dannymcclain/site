@@ -1,14 +1,5 @@
 <script>
-
     import Button from '../components/Button.svelte'
-
-    let style= 'line'
-    function handleMouseOver(e) {
-        style= 'filled'
-    }
-    function handleMouseOut(e) {
-        style= 'line'
-    }
 </script>
 
 <style>
