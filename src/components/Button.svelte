@@ -7,7 +7,7 @@
 
 <a 
 on:click={() => {
-    goto(`${url}}`, {
+    goto(url, {
         keepfocus: false
     })
 }}

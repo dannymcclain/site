@@ -7,7 +7,6 @@
 <p>I like to design systematically and put an emphasis on tidiness.</p>
 
 <Button name='about' url='/info' label='Learn more about me'></Button>
-<ButtonAlt name='about' url='/info' label='Learn more about me'></ButtonAlt>
 
 <style>
     h1 {
