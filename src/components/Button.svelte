@@ -1,17 +1,16 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
-import { prevent_default } from 'svelte/internal';
     export let name:String = '';
     export let label:String = '';
     export let url:string = '';
-
-    function handleClick(e) {
-        e.preventDefault();
-        goto(url);
-    }
 </script>
 
-<a on:click={handleClick}
+<a 
+on:click={() => {
+    goto(`${url}}`, {
+        keepfocus: false
+    })
+}}
     href={url} 
     class="button">
         <div class="icon-image">
