@@ -17,17 +17,41 @@
 <a on:mouseenter={enter} on:mouseleave={leave}
 href={url} 
 class="button">
-    <svg class="icon">
-        {#if hovering}
-            <use href="icons.svg#{name}-filled"></use>
-        {:else}
-            <use href="icons.svg#{name}-line"></use>
-            {/if}
-    </svg>
+    <div class="icon-image">
+        <div class="svg-wrap">
+            <svg class="icon">
+                <use href="icons.svg#{name}-line"></use>
+            </svg>
+            <svg class="icon">
+                <use href="icons.svg#{name}-filled"></use>
+            </svg>
+        </div>
+    </div>
     {label}
 </a>
 
 <style>
+    .icon-image {
+        height:24px;
+        width:24px;
+        position: relative;
+        display:inline-block;
+        overflow: hidden;
+        margin-right: .5em
+    }
+    .svg-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position:absolute;
+        top:0;
+        left:0;
+        /* transition: top 300ms cubic-bezier(0.175, 0.885, 0.32, 1); */
+    }
+    .button:hover .svg-wrap {
+        top:-24px;
+    }
     .button {
         display: inline-flex;
         flex-direction: row;
