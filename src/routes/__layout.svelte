@@ -34,6 +34,7 @@
 
     main {
         padding: 40px 20px;
+        max-width: 640px;
     }
     nav {
         display: flex;
@@ -44,7 +45,8 @@
 
     @media screen and (min-width: 768px){
         main {
-            padding: 120px;
+            padding: 0;
+            margin: 40px auto;
         }
     }
 </style>
