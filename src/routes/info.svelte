@@ -5,32 +5,56 @@
 </script>
 
 
-<section 
+<div 
     in:fade="{{ delay: 300, duration: 300, easing: quadInOut}}"
     out:fade="{{ duration: 150, easing: quadInOut}}"
     >
 
-    <h2>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_1543_5427)">
-            <path d="M12 0C8.68629 0 6 2.68629 6 6C6 9.31371 8.68629 12 12 12C15.3137 12 18 9.31371 18 6C18 2.68629 15.3137 0 12 0Z" fill="#0044FF"/>
-            <path d="M7 14C4.23858 14 2 16.2386 2 19C2 21.7614 4.23858 24 7 24H17C19.7614 24 22 21.7614 22 19C22 16.2386 19.7614 14 17 14H7Z" fill="#0044FF"/>
-            </g>
-            <defs>
-            <clipPath id="clip0_1543_5427">
-            <rect width="24" height="24" fill="white"/>
-            </clipPath>
-            </defs>
-        </svg>                     
-        About me
-    </h2>
+    <section>
+        <h2>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1543_5427)">
+                <path d="M12 0C8.68629 0 6 2.68629 6 6C6 9.31371 8.68629 12 12 12C15.3137 12 18 9.31371 18 6C18 2.68629 15.3137 0 12 0Z" fill="#0044FF"/>
+                <path d="M7 14C4.23858 14 2 16.2386 2 19C2 21.7614 4.23858 24 7 24H17C19.7614 24 22 21.7614 22 19C22 16.2386 19.7614 14 17 14H7Z" fill="#0044FF"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1543_5427">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>
+            About me
+        </h2>
+        
+        <p class="intro">
+            I'm a husband and father of two who enjoys homesteading with my family outside <a href="https://goo.gl/maps/oSPQ47UfUpMuvTbo8" target="_blank">Nashville, TN</a>. I love riding bicycles and am just as likely to be found listening to <a href="https://darkdescentrecords.bandcamp.com/album/hidden-history-of-the-human-race" target="_blank">Blood Incantation</a> as I am <a href="https://acemo.bandcamp.com/album/i-want-to-believe" target="_blank">AceMo</a>.
+        </p>
+    </section>
 
-    <p class="intro">
-        I'm a husband and father of two who enjoys homesteading with my family outside <a href="https://goo.gl/maps/oSPQ47UfUpMuvTbo8" target="_blank">Nashville, TN</a>. I love riding bicycles and am just as likely to be found listening to <a href="https://darkdescentrecords.bandcamp.com/album/hidden-history-of-the-human-race" target="_blank">Blood Incantation</a> as I am <a href="https://acemo.bandcamp.com/album/i-want-to-believe" target="_blank">AceMo</a>.
-    </p>
-</section>
+    <section>
+        <h2>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1C5.25329 1 1 5.25329 1 10.5C1 15.7467 5.25329 20 10.5 20C12.3997 20 14.1691 19.4424 15.6536 18.482L19.5858 22.4142C20.3668 23.1953 21.6332 23.1953 22.4142 22.4142C23.1953 21.6332 23.1953 20.3668 22.4142 19.5858L18.482 15.6536C19.4424 14.1691 20 12.3997 20 10.5C20 5.25329 15.7467 1 10.5 1ZM5 10.5C5 7.46243 7.46243 5 10.5 5C13.5376 5 16 7.46243 16 10.5C16 13.5376 13.5376 16 10.5 16C7.46243 16 5 13.5376 5 10.5Z" fill="#0044FF"/>
+            </svg>
+            Find me on the web
+        </h2>
+        <ul>
+            <li><Button name='email' url='#' label='Email'></Button></li>
+            <li><Button name='figma' url='#' label='Figma'></Button></li>
+            <li><Button name='instagram' url='#' label='Instagram'></Button></li>
+            <li><Button name='twitter' url='#' label='Twitter'></Button></li>
+            <li><Button name='github' url='#' label='Github'></Button></li>
+            <li><Button name='dribbble' url='#' label='Dribbble'></Button></li>
+            <li><Button name='linkedin' url='#' label='Linkedin'></Button></li>
+            <li><Button name='readcv' url='#' label='Read.cv'></Button></li>
+        </ul>
+    </section>
+</div>
 
 <style>
+    section {
+        margin-bottom: 4rem;
+    }
     h2 {
         font-weight: 800;
         font-size: 1rem;
@@ -53,6 +77,7 @@
         letter-spacing: -0.02em;
     }
     p a {
+        font-weight: 600;
         text-decoration: none;
         border-bottom: 2px solid rgba(0, 68, 255, 0.12);
         padding: 2px 6px;
@@ -64,5 +89,17 @@
         border-color: var(--accent);
         background-color: var(--accent);
         color: white;
-    }    
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    ul li {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
 </style>
