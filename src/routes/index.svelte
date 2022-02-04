@@ -1,12 +1,12 @@
 <script>
     import Button from '../components/Button.svelte'
     import { fly } from 'svelte/transition'
-    import { quintInOut } from 'svelte/easing'
+    import { backInOut } from 'svelte/easing'
 </script>
 
 <section 
-    in:fly="{{y: -50, delay: 300, duration: 300, easing: quintInOut}}"
-    out:fly="{{y: 25, duration: 200, easing: quintInOut}}"
+    in:fly="{{y: 40, delay: 400, duration: 400, easing: backInOut}}"
+    out:fly="{{y: 20, duration: 200, easing: backInOut}}"
     >
     
     <h1>I'm a multidisciplinary designer currently focusing on design systems & icon sets.</h1>
