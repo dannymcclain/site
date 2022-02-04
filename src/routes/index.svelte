@@ -22,7 +22,7 @@
         font-weight: 800;
         font-size: 2rem;
         line-height: 3rem;
-        letter-spacing: -0.04em;
+        letter-spacing: -0.02em;
         margin-bottom: 1.25rem;
     }
 

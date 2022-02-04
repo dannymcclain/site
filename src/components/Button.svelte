@@ -4,30 +4,23 @@
     export let label:String = '';
     export let url:string = '';
     export let style:string = '';
-    let hovering = false;
+//     let hovering = false;
+// on:mouseenter={() => {hovering = true}}
+// on:mouseleave={() => {hovering = false}}
 </script>
 
 <a  
-    on:mouseenter={() => {hovering = true}}
-    on:mouseleave={() => {hovering = false}}
 
     style={style}
     href={url} 
     class="button">
         <div class="icon-image">
-            {#if hovering}
-            <svg 
-            
-                class="icon filled">
-                    <use href="icons.svg#{name}-filled"></use>
+            <svg class="icon line">
+                <use href="icons.svg#{name}-line"></use>
             </svg>
-            {:else}
-            <svg 
-            
-                class="icon line">
-                    <use href="icons.svg#{name}-line"></use>
+            <svg class="icon filled">
+                <use href="icons.svg#{name}-filled"></use>
             </svg>
-            {/if}
         </div>
     {label}
 </a>
@@ -43,7 +36,7 @@
         border: 2px solid rgba(0, 68, 255, 0.12);
         border-radius: 200px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 1rem;
         line-height: 1rem;
         letter-spacing: -0.02em;
@@ -69,25 +62,26 @@
         position: absolute;
         top:0;
         left:0;
-        margin-right: 0.5rem; 
+        /* margin-right: 0.5rem;  */
         width: 1.5rem;
         height: 1.5rem;
     }
 
-    /* .filled {
+    .filled {
         opacity:0;
-        transition: opacity 200ms linear;
+        transition: opacity 125ms linear;
+        /* transition-delay: 125ms; */
     }
     .line {
         opacity: 1;
-        transition: opacity 200ms linear;
+        transition: opacity 125ms linear;
     }
     
     .button:hover .filled {
         opacity: 1;
     }
 
-    .button:hover .line {
+    /* .button:hover .line {
         opacity:0;
     } */
     </style>

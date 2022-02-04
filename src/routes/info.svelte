@@ -32,7 +32,7 @@
 
 <style>
     h2 {
-        font-weight: bold;
+        font-weight: 800;
         font-size: 1rem;
         line-height: 1rem;
         letter-spacing: -0.01em;
@@ -49,10 +49,24 @@
     .intro {
         font-weight: normal;
         font-size: 1.25rem;
-        line-height: 2rem;
+        line-height: 2.25rem;
         letter-spacing: -0.02em;
     }
     p a {
+        text-decoration: none;
+        border-bottom: 2px solid rgba(0, 68, 255, 0.12);
+        /* background: rgba(0, 68, 255, 0.12); */
+        padding: 2px 4px;
+        color: var(--accent);
+        transition: border-color 125ms linear, background-color 125ms linear, color 125ms linear;
+    }
+    p a:hover {
+        border-radius: 4px;
+        border-color: var(--accent);
+        background-color: var(--accent);
+        color: white;
+    }
+    /* p a {
         text-decoration: none;
         border-bottom: 2px solid rgba(0, 68, 255, 0.12);
         padding: 2px;
@@ -63,8 +77,6 @@
         border-color: var(--accent);
         background-color: var(--accent);
         color: white;
-    }
-    /* p a:hover {
-        border-color: var(--accent);
     } */
+    
 </style>
