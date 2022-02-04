@@ -64,23 +64,25 @@
 
     .filled {
         opacity:0;
-        transform: scale(.4);
-        transition: transform 200ms ease-in-out, opacity 200ms linear;
+        /* transform: scale(.4); */
+        transition: opacity 200ms linear;
+        /* transition: transform 200ms ease-in-out, opacity 200ms linear; */
     }
     .line {
         opacity: 1;
-        transform: scale(1);
-        transition: transform 200ms ease-in-out, opacity 200ms linear;
+        /* transform: scale(1); */
+        transition: opacity 200ms linear;
+        /* transition: transform 200ms ease-in-out, opacity 200ms linear; */
     }
     
     .button:hover .filled {
         opacity: 1;
-        transform: scale(1);
+        /* transform: scale(1); */
     }
 
     .button:hover .line {
         opacity:0;
-        transform: scale(.4);
+        /* transform: scale(.4); */
     }
     </style>
     
