@@ -2,32 +2,25 @@
     export let name:String = '';
     export let label:String = '';
     export let url:string = '';
-
-    let hovering;
-
-	function enter() {
-		hovering = true;
-	}
-
-	function leave() {
-		hovering = false;
-	}
+    export let style:string = '';
 </script>
 
-<a on:mouseenter={enter} on:mouseleave={leave}
-href={url} 
-class="button">
-    <svg class="icon">
-        {#if hovering}
-            <use href="icons.svg#{name}-filled"></use>
-        {:else}
-            <use href="icons.svg#{name}-line"></use>
-            {/if}
-    </svg>
+<a
+    style={style}
+    href={url} 
+    class="button">
+        <div class="icon-image">
+            <svg class="icon line">
+                <use href="icons.svg#{name}-line"></use>
+            </svg>
+            <svg class="icon filled">
+                <use href="icons.svg#{name}-filled"></use>
+            </svg>
+        </div>
     {label}
 </a>
 
-<style>
+<style>   
     .button {
         display: inline-flex;
         flex-direction: row;
@@ -44,17 +37,50 @@ class="button">
         letter-spacing: -0.02em;
         text-decoration: none;
         color: var(--accent);
-        /* transition: background-color 150ms ease-in-out, border-color 150ms ease-in-out, color 150ms ease-in-out; */
+        transition: background-color 100ms linear, border-color 100ms linear, color 100ms linear;
     }
+    
     .button:hover {
         background: var(--accent);
         border-color: var(--accent);
         color: #fff;
     }
+    
+    .icon-image {
+        position: relative;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: .5rem;
+    }
+
     .icon {
+        position: absolute;
+        top:0;
+        left:0;
         width: 1.5rem;
         height: 1.5rem;
         margin-right: 0.5rem; 
+    }
+
+    .filled {
+        opacity:0;
+        transform: scale(.4);
+        transition: transform 200ms ease-in-out, opacity 200ms linear;
+    }
+    .line {
+        opacity: 1;
+        transform: scale(1);
+        transition: transform 200ms ease-in-out, opacity 200ms linear;
+    }
+    
+    .button:hover .filled {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .button:hover .line {
+        opacity:0;
+        transform: scale(.4);
     }
     </style>
     
