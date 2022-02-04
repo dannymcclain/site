@@ -26,7 +26,7 @@
     </h2>
 
     <p class="intro">
-        I'm a husband and father of two who enjoys homesteading with my family outside <a href="/">Nashville, TN</a>. I love riding bicycles and am just as likely to be found listening to <a href="/">Blood Incantation</a> as I am <a href="/">AceMo</a>.
+        I'm a husband and father of two who enjoys homesteading with my family outside <a href="https://goo.gl/maps/oSPQ47UfUpMuvTbo8" target="_blank">Nashville, TN</a>. I love riding bicycles and am just as likely to be found listening to <a href="https://darkdescentrecords.bandcamp.com/album/hidden-history-of-the-human-race" target="_blank">Blood Incantation</a> as I am <a href="https://acemo.bandcamp.com/album/i-want-to-believe" target="_blank">AceMo</a>.
     </p>
 </section>
 
@@ -55,7 +55,6 @@
     p a {
         text-decoration: none;
         border-bottom: 2px solid rgba(0, 68, 255, 0.12);
-        /* background: rgba(0, 68, 255, 0.12); */
         padding: 2px 6px;
         color: var(--accent);
         transition: border-color 125ms linear, background-color 125ms linear, color 125ms linear;
@@ -65,18 +64,5 @@
         border-color: var(--accent);
         background-color: var(--accent);
         color: white;
-    }
-    /* p a {
-        text-decoration: none;
-        border-bottom: 2px solid rgba(0, 68, 255, 0.12);
-        padding: 2px;
-        color: var(--accent);
-        transition: border-color 125ms linear, background-color 125ms linear, color 125ms linear;
-    }
-    p a:hover {
-        border-color: var(--accent);
-        background-color: var(--accent);
-        color: white;
-    } */
-    
+    }    
 </style>
