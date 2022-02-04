@@ -16,7 +16,7 @@
     class="button">
         <div class="icon-image">
             <svg class="icon line">
-                <use href="icons.svg#{name}-line"></use>
+                <use href="icons.svg#{name}"></use>
             </svg>
             <svg class="icon filled">
                 <use href="icons.svg#{name}-filled"></use>
