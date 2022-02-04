@@ -1,5 +1,6 @@
 <script>
     import Button from '../components/Button.svelte'
+    import ImageLoader from '../components/ImageLoader.svelte';
     import { fade } from 'svelte/transition'
     import { quadInOut } from 'svelte/easing'
 </script>
@@ -9,11 +10,21 @@
     out:fade="{{ duration: 150, easing: quadInOut}}"
     >
     
-    <h1>I'm a multidisciplinary designer currently focusing on design systems & icon sets.</h1>
-    
-    <p>I like to design systematically and put an emphasis on tidiness.</p>
-    
-    <Button name='about' url='/info' label='Learn more about me'></Button>
+    <section>
+        <h1>I'm a multidisciplinary designer currently focusing on design systems & icon sets.</h1>
+        
+        <p>I like to design systematically and put an emphasis on tidiness.</p>
+        
+        <!-- <Button name='about' url='/info' label='Learn more about me'></Button> -->
+    </section>
+
+    <section>
+        <ImageLoader src='images/colorful-icons.png' alt='Colorful Icons'/>
+        <ImageLoader src='images/design-icons.png' alt='Design Icons'/>
+        <ImageLoader src='images/dm-icon-set.png' alt='Personal Icon Set'/>
+    </section>
+
+
 </section>
 
 <style>

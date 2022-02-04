@@ -24,7 +24,7 @@
     }
 
     main {
-        padding: 40px 20px;
+        padding: 1.25rem;
         max-width: 640px;
     }
     nav {
@@ -32,7 +32,7 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 4rem;
+        margin-bottom: 2.5rem;
     }
 
     @media screen and (min-width: 768px){
