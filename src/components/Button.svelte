@@ -65,12 +65,12 @@
     .filled {
         opacity:0;
         transform: scale(.4);
-        transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.2), opacity 200ms linear;
+        transition: transform 200ms ease-in-out, opacity 200ms linear;
     }
     .line {
         opacity: 1;
         transform: scale(1);
-        transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.2), opacity 200ms linear;
+        transition: transform 200ms ease-in-out, opacity 200ms linear;
     }
     
     .button:hover .filled {

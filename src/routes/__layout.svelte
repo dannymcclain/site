@@ -32,7 +32,7 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 2.5rem;
+        margin-bottom: 4rem;
     }
 
     @media screen and (min-width: 768px){
