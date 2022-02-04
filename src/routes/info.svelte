@@ -1,13 +1,13 @@
 <script>
     import Button from '../components/Button.svelte'
-    import { fly } from 'svelte/transition'
-    import { backInOut } from 'svelte/easing'
+    import { fade } from 'svelte/transition'
+    import { quadInOut } from 'svelte/easing'
 </script>
 
 
 <section 
-    in:fly="{{y: 40, delay: 400, duration: 400, easing: backInOut}}"
-    out:fly="{{y: 20, duration: 200, easing: backInOut}}"
+    in:fade="{{ delay: 300, duration: 300, easing: quadInOut}}"
+    out:fade="{{ duration: 150, easing: quadInOut}}"
     >
 
     <h2>
@@ -52,4 +52,19 @@
         line-height: 2rem;
         letter-spacing: -0.02em;
     }
+    p a {
+        text-decoration: none;
+        border-bottom: 2px solid rgba(0, 68, 255, 0.12);
+        padding: 2px;
+        color: var(--accent);
+        transition: border-color 125ms linear, background-color 125ms linear, color 125ms linear;
+    }
+    p a:hover {
+        border-color: var(--accent);
+        background-color: var(--accent);
+        color: white;
+    }
+    /* p a:hover {
+        border-color: var(--accent);
+    } */
 </style>
