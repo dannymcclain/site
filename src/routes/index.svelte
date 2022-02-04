@@ -18,7 +18,7 @@
         <!-- <Button name='about' url='/info' label='Learn more about me'></Button> -->
     </section>
 
-    <section>
+    <section class="grid">
         <ImageLoader src='images/colorful-icons.png' alt='Colorful Icons'/>
         <ImageLoader src='images/design-icons.png' alt='Design Icons'/>
         <ImageLoader src='images/dm-icon-set.png' alt='Personal Icon Set'/>
@@ -44,5 +44,17 @@
         line-height: 2rem;
         letter-spacing: -0.02em;
         margin-bottom: 2.5rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1.25rem;
+    }
+
+    @media screen and (min-width:768px) {
+        .grid {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 </style>
