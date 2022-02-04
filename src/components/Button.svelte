@@ -1,21 +1,33 @@
 <script lang="ts">
+    import { fade } from 'svelte/transition'
     export let name:String = '';
     export let label:String = '';
     export let url:string = '';
     export let style:string = '';
+    let hovering = false;
 </script>
 
-<a
+<a  
+    on:mouseenter={() => {hovering = true}}
+    on:mouseleave={() => {hovering = false}}
+
     style={style}
     href={url} 
     class="button">
         <div class="icon-image">
-            <svg class="icon line">
-                <use href="icons.svg#{name}-line"></use>
+            {#if hovering}
+            <svg 
+            
+                class="icon filled">
+                    <use href="icons.svg#{name}-filled"></use>
             </svg>
-            <svg class="icon filled">
-                <use href="icons.svg#{name}-filled"></use>
+            {:else}
+            <svg 
+            
+                class="icon line">
+                    <use href="icons.svg#{name}-line"></use>
             </svg>
+            {/if}
         </div>
     {label}
 </a>
@@ -37,7 +49,7 @@
         letter-spacing: -0.02em;
         text-decoration: none;
         color: var(--accent);
-        transition: background-color 100ms linear, border-color 100ms linear, color 100ms linear;
+        transition: background-color 125ms linear, border-color 125ms linear, color 125ms linear;
     }
     
     .button:hover {
@@ -57,32 +69,26 @@
         position: absolute;
         top:0;
         left:0;
+        margin-right: 0.5rem; 
         width: 1.5rem;
         height: 1.5rem;
-        margin-right: 0.5rem; 
     }
 
-    .filled {
+    /* .filled {
         opacity:0;
-        /* transform: scale(.4); */
         transition: opacity 200ms linear;
-        /* transition: transform 200ms ease-in-out, opacity 200ms linear; */
     }
     .line {
         opacity: 1;
-        /* transform: scale(1); */
         transition: opacity 200ms linear;
-        /* transition: transform 200ms ease-in-out, opacity 200ms linear; */
     }
     
     .button:hover .filled {
         opacity: 1;
-        /* transform: scale(1); */
     }
 
     .button:hover .line {
         opacity:0;
-        /* transform: scale(.4); */
-    }
+    } */
     </style>
     
