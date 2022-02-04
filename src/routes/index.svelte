@@ -1,11 +1,20 @@
 <script>
     import Button from '../components/Button.svelte'
+    import { fly } from 'svelte/transition'
+    import { quintInOut } from 'svelte/easing'
 </script>
-<h1>I'm a multidisciplinary designer currently focusing on design systems & icon sets.</h1>
 
-<p>I like to design systematically and put an emphasis on tidiness.</p>
-
-<Button name='about' url='/info' label='Learn more about me'></Button>
+<section 
+    in:fly="{{y: -50, delay: 300, duration: 300, easing: quintInOut}}"
+    out:fly="{{y: 25, duration: 200, easing: quintInOut}}"
+    >
+    
+    <h1>I'm a multidisciplinary designer currently focusing on design systems & icon sets.</h1>
+    
+    <p>I like to design systematically and put an emphasis on tidiness.</p>
+    
+    <Button name='about' url='/info' label='Learn more about me'></Button>
+</section>
 
 <style>
     h1 {
