@@ -56,7 +56,7 @@
         text-decoration: none;
         border-bottom: 2px solid rgba(0, 68, 255, 0.12);
         /* background: rgba(0, 68, 255, 0.12); */
-        padding: 2px 4px;
+        padding: 2px 6px;
         color: var(--accent);
         transition: border-color 125ms linear, background-color 125ms linear, color 125ms linear;
     }
