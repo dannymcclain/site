@@ -30,8 +30,9 @@
     nav {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
+        margin-bottom: 2.5rem;
     }
 
     @media screen and (min-width: 768px){
@@ -45,7 +46,7 @@
 <main>
     
     <nav>
-        <Button name='smile' label='Danny McClain' url='/'></Button>
+        <Button style='margin-right: 20px;' name='smile' label='Danny McClain' url='/'></Button>
         <Button name='info' label='Info' url='/info'></Button>
     </nav>
 

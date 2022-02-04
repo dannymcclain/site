@@ -1,16 +1,12 @@
 <script lang="ts">
-    import { goto } from '$app/navigation';
     export let name:String = '';
     export let label:String = '';
     export let url:string = '';
+    export let style:string = '';
 </script>
 
-<a 
-on:click={() => {
-    goto(url, {
-        keepfocus: false
-    })
-}}
+<a
+    style={style}
     href={url} 
     class="button">
         <div class="icon-image">
@@ -68,13 +64,13 @@ on:click={() => {
 
     .filled {
         opacity:0;
-        transform: scale(.2);
-        transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 200ms linear;
+        transform: scale(.4);
+        transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.2), opacity 200ms linear;
     }
     .line {
         opacity: 1;
         transform: scale(1);
-        transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 200ms linear;
+        transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.2), opacity 200ms linear;
     }
     
     .button:hover .filled {
@@ -84,7 +80,7 @@ on:click={() => {
 
     .button:hover .line {
         opacity:0;
-        transform: scale(.2);
+        transform: scale(.4);
     }
     </style>
     
