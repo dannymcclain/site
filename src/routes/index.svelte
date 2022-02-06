@@ -11,6 +11,7 @@
     >
     
     <section class="intro">
+        <img src="portrait.png" alt="A portriat of me by Cymone Wilder" />
         <h1>I'm a multidisciplinary designer currently focusing on design systems & icon sets.</h1>
         
         <p>I like to design systematically and put an emphasis on tidiness.</p>
@@ -28,6 +29,11 @@
 </section>
 
 <style>
+    img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 2rem;
+    }
     h1 {
         font-style: normal;
         font-weight: 900;

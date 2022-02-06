@@ -22,6 +22,7 @@
         font-family: 'Satoshi-Variable', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
         font-size: 16px;
         font-weight: 500;
+        line-height: 1.75rem;
         text-align: center;
         color: var(--accent);
     }

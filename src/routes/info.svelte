@@ -12,31 +12,35 @@
 
     <section>
         <h2>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_1543_5427)">
-                <path d="M12 0C8.68629 0 6 2.68629 6 6C6 9.31371 8.68629 12 12 12C15.3137 12 18 9.31371 18 6C18 2.68629 15.3137 0 12 0Z" fill="#0044FF"/>
-                <path d="M7 14C4.23858 14 2 16.2386 2 19C2 21.7614 4.23858 24 7 24H17C19.7614 24 22 21.7614 22 19C22 16.2386 19.7614 14 17 14H7Z" fill="#0044FF"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_1543_5427">
-                <rect width="24" height="24" fill="white"/>
-                </clipPath>
-                </defs>
-            </svg>
+            <div class="svg-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1543_5427)">
+                    <path d="M12 0C8.68629 0 6 2.68629 6 6C6 9.31371 8.68629 12 12 12C15.3137 12 18 9.31371 18 6C18 2.68629 15.3137 0 12 0Z" fill="#0044FF"/>
+                    <path d="M7 14C4.23858 14 2 16.2386 2 19C2 21.7614 4.23858 24 7 24H17C19.7614 24 22 21.7614 22 19C22 16.2386 19.7614 14 17 14H7Z" fill="#0044FF"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1543_5427">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </div>
             About me
         </h2>
         
-        <p class="intro">
-            I'm a husband and father of two who enjoys homesteading with my family outside <a href="https://goo.gl/maps/oSPQ47UfUpMuvTbo8" target="_blank">Nashville, TN</a>. I'm just as likely to be found listening to <a href="https://darkdescentrecords.bandcamp.com/album/hidden-history-of-the-human-race" target="_blank">Blood Incantation</a> as I am <a href="https://acemo.bandcamp.com/album/i-want-to-believe" target="_blank">AceMo</a>.
+        <p class="body-large">
+            I'm Danny McClain, a husband & father of two who enjoys homesteading with my family in middle Tennessee. I'm just as likely to be found listening to <a href="https://darkdescentrecords.bandcamp.com/album/hidden-history-of-the-human-race" target="_blank">Blood Incantation</a> as I am <a href="https://acemo.bandcamp.com/album/i-want-to-believe" target="_blank">AceMo</a>.
         </p>
     </section>
 
     <section>
         <h2>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1C5.25329 1 1 5.25329 1 10.5C1 15.7467 5.25329 20 10.5 20C12.3997 20 14.1691 19.4424 15.6536 18.482L19.5858 22.4142C20.3668 23.1953 21.6332 23.1953 22.4142 22.4142C23.1953 21.6332 23.1953 20.3668 22.4142 19.5858L18.482 15.6536C19.4424 14.1691 20 12.3997 20 10.5C20 5.25329 15.7467 1 10.5 1ZM5 10.5C5 7.46243 7.46243 5 10.5 5C13.5376 5 16 7.46243 16 10.5C16 13.5376 13.5376 16 10.5 16C7.46243 16 5 13.5376 5 10.5Z" fill="#0044FF"/>
-            </svg>
-            Find me on the web
+            <div class="svg-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1C5.25329 1 1 5.25329 1 10.5C1 15.7467 5.25329 20 10.5 20C12.3997 20 14.1691 19.4424 15.6536 18.482L19.5858 22.4142C20.3668 23.1953 21.6332 23.1953 22.4142 22.4142C23.1953 21.6332 23.1953 20.3668 22.4142 19.5858L18.482 15.6536C19.4424 14.1691 20 12.3997 20 10.5C20 5.25329 15.7467 1 10.5 1ZM5 10.5C5 7.46243 7.46243 5 10.5 5C13.5376 5 16 7.46243 16 10.5C16 13.5376 13.5376 16 10.5 16C7.46243 16 5 13.5376 5 10.5Z" fill="#0044FF"/>
+                </svg>
+            </div>
+            Find me out there
         </h2>
         <ul>
             <li><Button style='grid' name='email' url='#' label='Email'></Button></li>
@@ -56,25 +60,33 @@
         margin-bottom: 4rem;
     }
     h2 {
-        font-weight: 800;
-        font-size: 1rem;
-        line-height: 1rem;
-        letter-spacing: -0.01em;
-        margin-bottom: 1.25rem;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        
+        margin-bottom: 1.75rem;
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    h2 .svg-wrap {
+        padding: .5rem;
+        background: rgba(0, 68, 255, 0.08);
+        border-radius: .5rem;
+        margin-bottom: .5rem;
+        display: flex;
+        justify-content: center;
         align-items: center;
     }
-    h2 svg {
-        margin-right: .5rem;
-    }
 
-    .intro {
-        font-weight: normal;
+    .body-large {
+        font-style: normal;
+        font-weight: 500;
         font-size: 1.25rem;
-        line-height: 2.25rem;
-        letter-spacing: -0.02em;
+        line-height: 2rem;
     }
     p a {
         font-weight: 600;
