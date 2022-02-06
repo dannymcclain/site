@@ -3,7 +3,7 @@
  *
  * Font Family: Satoshi
  * Designed by: Deni Anggara
- * URL: https://www../fontshare.com/./fonts/satoshi
+ * URL: https://www./fontshare.com//fonts/satoshi
  * © 2022 Indian Type Foundry
  *
  * Font Styles:
@@ -36,9 +36,9 @@
 
 @font-face {
   font-family: 'Satoshi-Variable';
-  src: url('./fonts/Satoshi-Variable.woff2') format('woff2'),
-       url('./fonts/Satoshi-Variable.woff') format('woff'),
-       url('./fonts/Satoshi-Variable.ttf') format('truetype');
+  src: url('/fonts/Satoshi-Variable.woff2') format('woff2'),
+       url('/fonts/Satoshi-Variable.woff') format('woff'),
+       url('/fonts/Satoshi-Variable.ttf') format('truetype');
        font-weight: 300 900;
        font-display: swap;
        font-style: normal;
@@ -58,9 +58,9 @@
 
 @font-face {
   font-family: 'Satoshi-Medium';
-  src: url('./fonts/Satoshi-Medium.woff2') format('woff2'),
-       url('./fonts/Satoshi-Medium.woff') format('woff'),
-       url('./fonts/Satoshi-Medium.ttf') format('truetype');
+  src: url('/fonts/Satoshi-Medium.woff2') format('woff2'),
+       url('/fonts/Satoshi-Medium.woff') format('woff'),
+       url('/fonts/Satoshi-Medium.ttf') format('truetype');
        font-weight: 500;
        font-display: swap;
        font-style: normal;
@@ -68,9 +68,9 @@
 
 @font-face {
   font-family: 'Satoshi-Bold';
-  src: url('./fonts/Satoshi-Bold.woff2') format('woff2'),
-       url('./fonts/Satoshi-Bold.woff') format('woff'),
-       url('./fonts/Satoshi-Bold.ttf') format('truetype');
+  src: url('/fonts/Satoshi-Bold.woff2') format('woff2'),
+       url('/fonts/Satoshi-Bold.woff') format('woff'),
+       url('/fonts/Satoshi-Bold.ttf') format('truetype');
        font-weight: 700;
        font-display: swap;
        font-style: normal;
@@ -78,9 +78,9 @@
 
 @font-face {
   font-family: 'Satoshi-Black';
-  src: url('./fonts/Satoshi-Black.woff2') format('woff2'),
-       url('./fonts/Satoshi-Black.woff') format('woff'),
-       url('./fonts/Satoshi-Black.ttf') format('truetype');
+  src: url('/fonts/Satoshi-Black.woff2') format('woff2'),
+       url('/fonts/Satoshi-Black.woff') format('woff'),
+       url('/fonts/Satoshi-Black.ttf') format('truetype');
        font-weight: 900;
        font-display: swap;
        font-style: normal;

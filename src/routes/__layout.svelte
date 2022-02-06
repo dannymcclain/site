@@ -1,10 +1,10 @@
 <script>
     import Button from '../components/Button.svelte'
+    import '../satoshi.css'
 </script>
 
 <style>
-    @import url('../satoshi.css');
-    /* @import url('https://rsms.me/inter/inter.css'); */
+    /* @import url('../satoshi.css'); */
 
     :global(:root){
         --accent: #0044ff;
