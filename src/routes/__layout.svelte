@@ -3,7 +3,8 @@
 </script>
 
 <style>
-    @import url('https://rsms.me/inter/inter.css');
+    @import url('../satoshi.css');
+    /* @import url('https://rsms.me/inter/inter.css'); */
 
     :global(:root){
         --accent: #0044ff;
@@ -18,8 +19,10 @@
         box-sizing: border-box;
     }
     :global(body){
-        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+        font-family: 'Satoshi-Variable', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
         font-size: 16px;
+        font-weight: 500;
+        text-align: center;
         color: var(--accent);
     }
 
@@ -30,9 +33,11 @@
     nav {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 2.5rem;
+        padding: 1.25rem;
+        border-bottom: 2px solid rgba(0, 68, 255, 0.12);
     }
 
     @media screen and (min-width: 768px){
@@ -43,13 +48,10 @@
     }
 </style>
 
+<nav>
+    <Button style='nav' name='home' label='Home' url='/'></Button>
+    <Button style='nav' name='info' label='Info' url='/info'></Button>
+</nav>
 <main>
-    
-    <nav>
-        <Button style='margin-right: 20px;' name='smile' label='Danny McClain' url='/'></Button>
-        <Button name='info' label='Info' url='/info'></Button>
-    </nav>
-
     <slot></slot>
-
 </main>

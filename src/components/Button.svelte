@@ -10,10 +10,9 @@
 </script>
 
 <a  
-
-    style={style}
+    
     href={url} 
-    class="button">
+    class="button {style}">
         <div class="icon-image">
             <svg class="icon line">
                 <use href="icons.svg#{name}"></use>
@@ -26,31 +25,60 @@
 </a>
 
 <style>   
+/* BASE STYLES */
     .button {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1rem;
+        text-decoration: none;
+        color: var(--accent);
         display: inline-flex;
+    }
+
+/* NORMAL VARIANT */
+    .normal {
         flex-direction: row;
         align-items: center;
         flex-basis: auto;
-        padding: 12px 16px;
+        padding: .75rem 1rem;
         background: transparent;
         border: 2px solid rgba(0, 68, 255, 0.12);
-        border-radius: 200px;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1rem;
-        line-height: 1rem;
-        letter-spacing: -0.02em;
-        text-decoration: none;
-        color: var(--accent);
+        border-radius: 8px;
         transition: background-color 125ms linear, border-color 125ms linear, color 125ms linear;
     }
     
-    .button:hover {
+    .normal:hover, .grid:hover {
         background: var(--accent);
         border-color: var(--accent);
         color: #fff;
     }
     
+    /* NAV VARIANT */
+    .nav {
+        flex-direction: row;
+        align-items: center;
+        flex-basis: auto;
+        background: transparent;
+    }
+    
+    /* GRID VARIANT */
+    .grid {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1.25rem;
+        border: 2px solid rgba(0, 68, 255, 0.12);
+        border-radius: 8px;
+        width: 100%;
+        transition: background-color 125ms linear, border-color 125ms linear, color 125ms linear;
+    }
+    .grid .icon-image {
+        margin-right: 0;
+        margin-bottom: .5rem;
+    }
+
+/* ICON SWAPPING     */
     .icon-image {
         position: relative;
         height: 1.5rem;
@@ -62,7 +90,6 @@
         position: absolute;
         top:0;
         left:0;
-        /* margin-right: 0.5rem;  */
         width: 1.5rem;
         height: 1.5rem;
     }
@@ -70,7 +97,6 @@
     .filled {
         opacity:0;
         transition: opacity 125ms linear;
-        /* transition-delay: 125ms; */
     }
     .line {
         opacity: 1;
@@ -80,9 +106,8 @@
     .button:hover .filled {
         opacity: 1;
     }
-
-    /* .button:hover .line {
-        opacity:0;
-    } */
+    .button:hover .line {
+        opacity: 0;
+    }
     </style>
     

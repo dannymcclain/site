@@ -39,14 +39,14 @@
             Find me on the web
         </h2>
         <ul>
-            <li><Button name='email' url='#' label='Email'></Button></li>
-            <li><Button name='figma' url='#' label='Figma'></Button></li>
-            <li><Button name='instagram' url='#' label='Instagram'></Button></li>
-            <li><Button name='twitter' url='#' label='Twitter'></Button></li>
-            <li><Button name='github' url='#' label='Github'></Button></li>
-            <li><Button name='dribbble' url='#' label='Dribbble'></Button></li>
-            <li><Button name='linkedin' url='#' label='Linkedin'></Button></li>
-            <li><Button name='readcv' url='#' label='Read.cv'></Button></li>
+            <li><Button style='grid' name='email' url='#' label='Email'></Button></li>
+            <li><Button style='grid' name='figma' url='#' label='Figma'></Button></li>
+            <li><Button style='grid' name='instagram' url='#' label='Instagram'></Button></li>
+            <li><Button style='grid' name='twitter' url='#' label='Twitter'></Button></li>
+            <li><Button style='grid' name='github' url='#' label='Github'></Button></li>
+            <li><Button style='grid' name='dribbble' url='#' label='Dribbble'></Button></li>
+            <li><Button style='grid' name='linkedin' url='#' label='Linkedin'></Button></li>
+            <li><Button style='grid' name='readcv' url='#' label='Read.cv'></Button></li>
         </ul>
     </section>
 </div>
@@ -90,7 +90,7 @@
         background-color: var(--accent);
         color: white;
     }
-    ul {
+    /* ul {
         list-style: none;
         display: flex;
         flex-direction: row;
@@ -101,5 +101,14 @@
     ul li {
         margin-right: 20px;
         margin-bottom: 20px;
+    } */
+    ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.25rem;
+    }
+    ul li {
+        width: 100%;
     }
 </style>
