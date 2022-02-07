@@ -14,22 +14,17 @@
         <h2>
             <div class="svg-wrap">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1543_5427)">
-                    <path d="M12 0C8.68629 0 6 2.68629 6 6C6 9.31371 8.68629 12 12 12C15.3137 12 18 9.31371 18 6C18 2.68629 15.3137 0 12 0Z" fill="#0044FF"/>
-                    <path d="M7 14C4.23858 14 2 16.2386 2 19C2 21.7614 4.23858 24 7 24H17C19.7614 24 22 21.7614 22 19C22 16.2386 19.7614 14 17 14H7Z" fill="#0044FF"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_1543_5427">
-                    <rect width="24" height="24" fill="white"/>
-                    </clipPath>
-                    </defs>
+                    <use href="icons.svg#person-heading"></use>
                 </svg>
             </div>
             About me
         </h2>
         
         <p class="body-large">
-            I'm Danny McClain, a husband & father of two who enjoys homesteading with my family in middle Tennessee. I'm just as likely to be found listening to <a href="https://darkdescentrecords.bandcamp.com/album/hidden-history-of-the-human-race" target="_blank">Blood Incantation</a> as I am <a href="https://acemo.bandcamp.com/album/i-want-to-believe" target="_blank">AceMo</a>.
+            I'm Danny McClain, a husband and father of two who enjoys homesteading with my family in Middle Tennessee.
+        </p>
+        <p>
+            I love riding bicycles and goofing around outside. I'm just as likely to be found listening to <a href="https://darkdescentrecords.bandcamp.com/album/hidden-history-of-the-human-race" target="_blank">Blood Incantation</a> as I am <a href="https://acemo.bandcamp.com/album/i-want-to-believe" target="_blank">AceMo</a>.
         </p>
     </section>
 
@@ -37,7 +32,7 @@
         <h2>
             <div class="svg-wrap">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1C5.25329 1 1 5.25329 1 10.5C1 15.7467 5.25329 20 10.5 20C12.3997 20 14.1691 19.4424 15.6536 18.482L19.5858 22.4142C20.3668 23.1953 21.6332 23.1953 22.4142 22.4142C23.1953 21.6332 23.1953 20.3668 22.4142 19.5858L18.482 15.6536C19.4424 14.1691 20 12.3997 20 10.5C20 5.25329 15.7467 1 10.5 1ZM5 10.5C5 7.46243 7.46243 5 10.5 5C13.5376 5 16 7.46243 16 10.5C16 13.5376 13.5376 16 10.5 16C7.46243 16 5 13.5376 5 10.5Z" fill="#0044FF"/>
+                    <use href="icons.svg#search-heading"></use>
                 </svg>
             </div>
             Find me out there
@@ -52,6 +47,47 @@
             <li><Button style='grid' name='linkedin' url='#' label='Linkedin'></Button></li>
             <li><Button style='grid' name='readcv' url='#' label='Read.cv'></Button></li>
         </ul>
+    </section>
+
+    <section class="extended-reading">
+        <h2>
+            <div class="svg-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use href="icons.svg#book-heading"></use>
+                </svg>
+            </div>
+            Extended reading
+        </h2>
+    
+        <p>
+            I've been designing interfaces (websites, apps, diGiTaL eXpEriEnCeS, etc.) for over a decade. I believe design is a craft, and I super care about every little detail (but I'm also experienced enough to know when to compromise). I've always gravitated towards, and had the most fun in, the blurry area where design meets code—so I'm just as happy mocking something up with HTML/CSS/JS as I am defining constraints and creating variants in Figma.
+        </p>
+
+        <p>
+            Because of my penchant for neatness, I really fell in love working on design systems. While I enjoy—and obsess over—the finer points of visual design, component architecture and organization, and maintaining high standards throughout, the thing that I really love about design systems is the impact my work can have for other designers and developers. For me, it's thrilling when <em>my</em> work makes <em>someone else's</em> work easier, faster, or better. And when your teammates are your “customers,” you get this magical gift of seeing your efforts turn to value <strong>directly</strong>. Hearing from someone you see everyday how much better their life is (in whatever small way) because of your work definitely hits me in the feels differently than delivering a top-tier experience to customers at large—that's still great too though!
+        </p>
+    </section>
+
+    <section>
+        <h2>
+            <div class="svg-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use href="icons.svg#heart-heading"></use>
+                </svg>
+            </div>
+            Parting thoughts
+        </h2>
+    
+        <p class="body-large">
+            The web is a wild place, and I strive for my impact to make it a more honest, more accessible, and more enjoyable place to be.
+        </p>
+
+        <p>
+            Have fun and stay safe!
+        </p>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use href="icons.svg#smile"></use>
+        </svg>
     </section>
 </div>
 
@@ -87,6 +123,7 @@
         font-weight: 500;
         font-size: 1.25rem;
         line-height: 2rem;
+        margin-bottom: 1rem;
     }
     p a {
         font-weight: 600;
@@ -97,23 +134,17 @@
         transition: border-color 125ms linear, background-color 125ms linear, color 125ms linear;
     }
     p a:hover {
-        border-radius: 4px;
+        border-radius: 8px;
         border-color: var(--accent);
         background-color: var(--accent);
         color: white;
     }
-    /* ul {
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
+    p:not(:last-child) {
+        margin-bottom: 1rem;
     }
-    ul li {
-        margin-right: 20px;
-        margin-bottom: 20px;
-    } */
+    .extended-reading p {
+        text-align: left;
+    }
     ul {
         list-style: none;
         display: grid;
@@ -122,5 +153,11 @@
     }
     ul li {
         width: 100%;
+    }
+    em {
+        font-style: italic;
+    }
+    strong {
+        font-weight: 900;
     }
 </style>

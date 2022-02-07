@@ -12,7 +12,7 @@
     
     <section class="intro">
         <img src="portrait.png" alt="A portriat of me by Cymone Wilder" />
-        <h1>I'm a multidisciplinary designer currently focusing on design systems & icon sets.</h1>
+        <h1>I'm a multidisciplinary designer currently focusing on design systems and icon sets.</h1>
         
         <p>I like to design systematically and put an emphasis on tidiness.</p>
         
@@ -30,8 +30,8 @@
 
 <style>
     img {
-        width: 120px;
-        height: 120px;
+        width: 136px;
+        height: 136px;
         margin-bottom: 2rem;
     }
     h1 {
@@ -39,7 +39,6 @@
         font-weight: 900;
         font-size: 2rem;
         line-height: 2.5rem;
-        text-align: center;
         letter-spacing: -0.02em;
         margin-bottom: 1rem;
     }
@@ -62,9 +61,9 @@
         grid-gap: 1.25rem;
     }
 
-    @media screen and (min-width:768px) {
+    /* @media screen and (min-width:768px) {
         .grid {
             grid-template-columns: 1fr 1fr;
         }
-    }
+    } */
 </style>
