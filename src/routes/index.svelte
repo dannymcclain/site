@@ -20,8 +20,8 @@
     </section>
 
     <section class="grid">
-        <ImageLoader src='images/colorful-icons.png' alt='Colorful Icons'/>
         <ImageLoader src='images/design-icons.png' alt='Design Icons'/>
+        <ImageLoader src='images/colorful-icons.png' alt='Colorful Icons'/>
         <ImageLoader src='images/dm-icon-set.png' alt='Personal Icon Set'/>
     </section>
 
