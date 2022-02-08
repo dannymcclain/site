@@ -15,9 +15,18 @@
     })
 </script>
 
-<img {src} {alt} class:loaded bind:this={thisImage} loading="lazy" />
+<div class="img-wrap">
+  <img {src} {alt} class:loaded bind:this={thisImage} loading="lazy" />
+</div>
 
 <style>
+    .img-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
     img {
       opacity: 0;
       transition: opacity 125ms linear;
