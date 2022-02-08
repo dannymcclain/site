@@ -20,7 +20,7 @@
 <style>
     img {
       opacity: 0;
-      transition: opacity 1000ms ease-out;
+      transition: opacity 125ms linear;
       width: 100%;
       height: auto;
     }

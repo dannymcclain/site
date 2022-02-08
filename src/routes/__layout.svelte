@@ -29,7 +29,7 @@
 
     main {
         padding: 1.25rem;
-        max-width: 640px;
+        max-width: 1200px;
     }
     nav {
         display: flex;
@@ -41,10 +41,22 @@
         border-bottom: 2px solid rgba(0, 68, 255, 0.12);
     }
 
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 481px){
         main {
             padding: 0;
-            margin: 40px auto;
+            margin: 2.5rem;
+        }
+    }
+    @media screen and (min-width: 769px){
+        main {
+            padding: 0;
+            margin: 4rem;
+        }
+    }
+    @media screen and (min-width: 1025px){
+        main {
+            padding: 0;
+            margin: 5rem;
         }
     }
 </style>
