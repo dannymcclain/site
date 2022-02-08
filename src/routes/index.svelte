@@ -6,26 +6,26 @@
 import { src_url_equal } from 'svelte/internal';
 
     let images = [
+        { src: 'images/sticker-icons.png', alt: 'Sticker Icons'},
         { src: 'images/1px-line-icons.png', alt: '1px Line Icons'},
-        { src: 'images/building-icons.png', alt: 'Building and Tools Icons'},
-        { src: 'images/accessibility-icons-grid.png', alt: 'Accessibility Icons'},
-        { src: 'images/colorful-icons.png', alt: 'Colorful Icons'},
         { src: 'images/design-icons.png', alt: 'Design Tools Icons'},
+        { src: 'images/building-icons.png', alt: 'Building and Tools Icons'},
+        { src: 'images/tools-icons.png', alt: 'Tool Icons'},
+        { src: 'images/accessibility-icons-grid.png', alt: 'Accessibility Icons'},
+        { src: 'images/music-icons.png', alt: 'Music Player Icons'},
+        { src: 'images/colorful-icons.png', alt: 'Colorful Icons'},
+        { src: 'images/sharp-icons.png', alt: 'Small Sharp Icons'},
         { src: 'images/dm-icon-set.png', alt: 'Sharp Thin Icons'},
         { src: 'images/grid-finder.png', alt: 'Grid Finder UI'},
         { src: 'images/happy-avatar-icon.png', alt: 'Happy Avatar Icon'},
         { src: 'images/inbox-replacement-icon.png', alt: 'Inbox Replacement Icon'},
         { src: 'images/little-figma-icon.png', alt: 'Little Figma Fanart Icon'},
-        { src: 'images/music-icons.png', alt: 'Music Player Icons'},
         { src: 'images/pinterest-style-icons.png', alt: 'Pinterest-style Icons'},
         { src: 'images/playstation-icons.png', alt: 'Playstation Icon Exploration'},
         { src: 'images/presentation-icons.png', alt: 'Personal Presentation Icons'},
+        { src: 'images/ratio.png', alt: 'Ratio Web UI'},
         { src: 'images/purple-icons.png', alt: 'Crocs-inspired Icons'},
         { src: 'images/ratio-app.png', alt: 'Ratio App UI'},
-        { src: 'images/sharp-icons.png', alt: 'Small Sharp Icons'},
-        { src: 'images/ratio.png', alt: 'Ratio Web UI'},
-        { src: 'images/sticker-icons.png', alt: 'Sticker Icons'},
-        { src: 'images/tools-icons.png', alt: 'Tool Icons'},
         { src: 'images/typora-replacement-icon.png', alt: 'Typora Replacement Icon'}
     ]
 </script>
@@ -80,7 +80,8 @@ import { src_url_equal } from 'svelte/internal';
     }
 
     .intro {
-        margin-bottom: 4rem;
+        margin: 0 auto 4rem;
+        max-width: 640px;
     }
 
     .grid {

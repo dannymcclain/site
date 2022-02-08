@@ -4,6 +4,14 @@
     export let label:String = '';
     export let url:string = '';
     export let style:string = '';
+    export let newTab:boolean = false;
+    let target;
+
+    if (newTab === true){
+        target = 'target="_blank"'
+    } else {
+        
+    }
 //     let hovering = false;
 // on:mouseenter={() => {hovering = true}}
 // on:mouseleave={() => {hovering = false}}
@@ -12,7 +20,9 @@
 <a  
     
     href={url} 
-    class="button {style}">
+    class="button {style}"
+    {target}
+    >
         <div class="icon-image">
             <svg class="icon line">
                 <use href="icons.svg#{name}"></use>

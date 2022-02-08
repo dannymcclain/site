@@ -56,7 +56,7 @@
     @media screen and (min-width: 1025px){
         main {
             padding: 0;
-            margin: 5rem;
+            margin: 5rem auto;
         }
     }
 </style>

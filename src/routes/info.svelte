@@ -38,14 +38,30 @@
             Find me out there
         </h2>
         <ul>
-            <li><Button style='grid' name='email' url='mailto:dannymcclainstudio@gmail.com' label='Email'></Button></li>
-            <li><Button style='grid' name='figma' url='https://www.figma.com/@dannymcclain' label='Figma'></Button></li>
-            <li><Button style='grid' name='instagram' url='http://instagram.com/dannymcclain/' label='Instagram'></Button></li>
-            <li><Button style='grid' name='twitter' url='http://twitter.com/dannymcclain/' label='Twitter'></Button></li>
-            <li><Button style='grid' name='github' url='http://github.com/dannymcclain/' label='Github'></Button></li>
-            <li><Button style='grid' name='dribbble' url='http://dribbble.com/dannymcclain' label='Dribbble'></Button></li>
-            <li><Button style='grid' name='linkedin' url='https://www.linkedin.com/in/dannymcclain/' label='Linkedin'></Button></li>
-            <li><Button style='grid' name='readcv' url='http://read.cv/danny' label='Read.cv'></Button></li>
+            <li>
+                <Button style='grid' name='email' url='mailto:dannymcclainstudio@gmail.com' label='Email'></Button>
+            </li>
+            <li>
+                <Button newTab={true} style='grid' name='figma' url='https://www.figma.com/@dannymcclain' label='Figma'></Button>
+            </li>
+            <li>
+                <Button newTab={true} style='grid' name='instagram' url='http://instagram.com/dannymcclain/' label='Instagram'></Button>
+            </li>
+            <li>
+                <Button newTab={true} style='grid' name='twitter' url='http://twitter.com/dannymcclain/' label='Twitter'></Button>
+            </li>
+            <li>
+                <Button newTab={true} style='grid' name='github' url='http://github.com/dannymcclain/' label='Github'></Button>
+            </li>
+            <li>
+                <Button newTab={true} style='grid' name='dribbble' url='http://dribbble.com/dannymcclain' label='Dribbble'></Button>
+            </li>
+            <li>
+                <Button newTab={true} style='grid' name='linkedin' url='https://www.linkedin.com/in/dannymcclain/' label='Linkedin'></Button>
+            </li>
+            <li>
+                <Button newTab={true} style='grid' name='readcv' url='http://read.cv/danny' label='Read.cv'></Button>
+            </li>
         </ul>
     </section>
 
@@ -93,7 +109,8 @@
 
 <style>
     section {
-        margin-bottom: 4rem;
+        margin: 0 auto 4rem;
+        max-width: 640px;
     }
     h2 {
         font-style: normal;
