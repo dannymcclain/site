@@ -29,7 +29,7 @@
     }
     img {
       opacity: 0;
-      transition: opacity 125ms linear;
+      transition: opacity 1000ms ease-in;
       width: 100%;
       height: auto;
     }
