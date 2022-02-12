@@ -99,11 +99,6 @@
 </section>
 
 <style>
-    .works {
-        width: 100%;
-        height: auto; 
-        border-radius: 8px;
-    }
     .coming-soon {
         width: 100%;
         height: auto;
@@ -117,20 +112,18 @@
 	}
 	
 	.tab-panel {
-        padding: 1.5rem 0 1.5rem 1.5rem;
-	}
-
-    /* .tab-panel:first-child {
-        padding-left: 1.5rem;
-    } */
-	.tab-panel {
         scroll-snap-align: start;
         scroll-snap-stop: always;
-		width: 90%;
+		width: 80%;
 		flex: 1 0 auto;
 		height: auto;
 		display: flex;
-        /* margin-right: 1rem; */
+        padding: 1.5rem 0 1.5rem 1.5rem;
+    }
+    .works {
+        width: 100%;
+        height: auto; 
+        border-radius: 8px;
     }
 
     .intro {
