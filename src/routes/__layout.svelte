@@ -59,6 +59,7 @@
     }
     main {
         padding: 0 1rem;
+        max-width: 700px;
     }
     nav {
         display: flex;

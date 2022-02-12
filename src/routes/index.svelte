@@ -4,7 +4,7 @@
     import { fade } from 'svelte/transition'
     import { quadInOut } from 'svelte/easing'
     import SectionCard from '../components/SectionCard.svelte'
-import { src_url_equal } from 'svelte/internal';
+    import { src_url_equal } from 'svelte/internal';
 
     let images = [
         { src: 'images/sticker-icons.png', alt: 'Sticker Icons'},
@@ -62,6 +62,7 @@ import { src_url_equal } from 'svelte/internal';
             </defs>
             </svg>
     </SectionCard>
+
     <SectionCard title="Icons" icon="image-filled">
         <section class="grid">
             {#each images as { src, alt}, i }
@@ -69,6 +70,8 @@ import { src_url_equal } from 'svelte/internal';
             {/each}
         </section>
     </SectionCard>
+
+
     <SectionCard title="Utilities" icon="pencil-filled">
         <p class="utilities-content">
             As someone primarily designing for the web, I like to explore the technologies that bring my designs to life. Here are a few small projects I've built to satisfy my own curiosity and speed up my workflow. Always more in the works.
@@ -115,7 +118,7 @@ import { src_url_equal } from 'svelte/internal';
     .grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 1.25rem;
+        grid-gap: 1rem;
     }
 
     @media screen and (min-width:769px) {
@@ -123,11 +126,7 @@ import { src_url_equal } from 'svelte/internal';
             grid-template-columns: 1fr 1fr;
         }
     }
-    @media screen and (min-width: 1025px){
-        .grid {
-            grid-template-columns: 1fr 1fr 1fr;
-        }    
-    }
+    
     .utilities-content {
         margin-bottom: 1.5rem;
     }
