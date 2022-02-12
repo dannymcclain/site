@@ -5,6 +5,21 @@
     import { quadInOut } from 'svelte/easing'
     import SectionCard from '../components/SectionCard.svelte'
     import { src_url_equal } from 'svelte/internal';
+    import Siema from 'siema';
+    import { onMount } from 'svelte';
+    onMount(()=>{
+        const mySiema = new Siema({
+            duration: 400,
+            easing: 'ease-in-out',
+            perPage: 1,
+            draggable: true,
+            multipleDrag: false,
+            loop: true,
+        });
+        setInterval(() => {
+            mySiema.next(1);
+  }, 3000)
+    })
 
     let images = [
         { src: 'images/sticker-icons.png', alt: 'Sticker Icons'},
@@ -64,14 +79,13 @@
     </SectionCard>
 
     <SectionCard title="Icons" icon="image-filled">
-        <section class="grid">
+        <div class="siema">
             {#each images as { src, alt}, i }
                 <ImageLoader {src} {alt} />
             {/each}
-        </section>
+        </div>
     </SectionCard>
-
-
+ 
     <SectionCard title="Utilities" icon="pencil-filled">
         <p class="utilities-content">
             As someone primarily designing for the web, I like to explore the technologies that bring my designs to life. Here are a few small projects I've built to satisfy my own curiosity and speed up my workflow. Always more in the works.
@@ -113,18 +127,6 @@
         line-height: 2.5rem;
         letter-spacing: -0.02em;
         margin-bottom: 1rem;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 1rem;
-    }
-
-    @media screen and (min-width:769px) {
-        .grid {
-            grid-template-columns: 1fr 1fr;
-        }
     }
     
     .utilities-content {
