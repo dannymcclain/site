@@ -1,6 +1,7 @@
 <script lang="ts">
     export let title:string = ''
     export let icon:string = ''
+    export let style:string=''
 </script>
 
 <section class="card">
@@ -12,7 +13,7 @@
         <h2 class="eyebrow">{title}</h2>
     </div>
 
-    <div class="content">
+    <div class="content" {style}>
         <slot></slot>
     </div>
         
