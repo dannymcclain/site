@@ -19,7 +19,7 @@
             </div>
             About me
         </h2>
-        
+        <img src="portrait.png" alt="A portriat of me by Cymone Wilder" />
         <p class="body-large">
             I'm Danny McClain, a husband and father of two who enjoys homesteading with my family in Middle Tennessee.
         </p>
@@ -135,27 +135,6 @@
         align-items: center;
     }
 
-    .body-large {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1.25rem;
-        line-height: 2rem;
-        margin-bottom: 1rem;
-    }
-    p a {
-        font-weight: 600;
-        text-decoration: none;
-        border-bottom: 2px solid rgba(0, 68, 255, 0.12);
-        padding: 2px 6px;
-        color: var(--accent);
-        transition: border-color 125ms linear, background-color 125ms linear, color 125ms linear;
-    }
-    p a:hover {
-        border-radius: 8px;
-        border-color: var(--accent);
-        background-color: var(--accent);
-        color: white;
-    }
     p:not(:last-child) {
         margin-bottom: 1rem;
     }
@@ -176,5 +155,10 @@
     }
     strong {
         font-weight: 900;
+    }
+    img {
+        width: 136px;
+        height: 136px;
+        margin-bottom: 2rem;
     }
 </style>
