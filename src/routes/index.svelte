@@ -1,48 +1,9 @@
 <script>
-    import Button from '../components/Button.svelte'
     import ImageLoader from '../components/ImageLoader.svelte';
     import { fade } from 'svelte/transition'
     import { quadInOut } from 'svelte/easing'
     import SectionCard from '../components/SectionCard.svelte'
     import { src_url_equal } from 'svelte/internal';
-    import Siema from 'siema';
-    import { onMount } from 'svelte';
-    onMount(()=>{
-        new Siema({
-            duration: 400,
-            easing: 'ease-in-out',
-            perPage: 1,
-            draggable: true,
-            multipleDrag: false,
-            loop: true,
-        });
-    })
-
-    let images = [
-        { src: 'images/sticker-icons.png', alt: 'Sticker Icons'},
-        { src: 'images/1px-line-icons.png', alt: '1px Line Icons'},
-        { src: 'images/design-icons.png', alt: 'Design Tools Icons'},
-        { src: 'images/location-types.png', alt: 'Location Types Icons'},
-        { src: 'images/building-icons.png', alt: 'Building and Tools Icons'},
-        { src: 'images/tools-icons.png', alt: 'Tool Icons'},
-        { src: 'images/accessibility-icons-grid.png', alt: 'Accessibility Icons'},
-        { src: 'images/music-icons.png', alt: 'Music Player Icons'},
-        { src: 'images/colorful-icons.png', alt: 'Colorful Icons'},
-        { src: 'images/sharp-icons.png', alt: 'Small Sharp Icons'},
-        { src: 'images/dm-icon-set.png', alt: 'Sharp Thin Icons'},
-        { src: 'images/call-schedule.png', alt: 'Call Scheduling UI'},
-        { src: 'images/grid-finder.png', alt: 'Grid Finder UI'},
-        { src: 'images/happy-avatar-icon.png', alt: 'Happy Avatar Icon'},
-        { src: 'images/inbox-replacement-icon.png', alt: 'Inbox Replacement Icon'},
-        { src: 'images/little-figma-icon.png', alt: 'Little Figma Fanart Icon'},
-        { src: 'images/pinterest-style-icons.png', alt: 'Pinterest-style Icons'},
-        { src: 'images/playstation-icons.png', alt: 'Playstation Icon Exploration'},
-        { src: 'images/presentation-icons.png', alt: 'Personal Presentation Icons'},
-        { src: 'images/ratio.png', alt: 'Ratio Web UI'},
-        { src: 'images/purple-icons.png', alt: 'Crocs-inspired Icons'},
-        { src: 'images/ratio-app.png', alt: 'Ratio App UI'},
-        { src: 'images/typora-replacement-icon.png', alt: 'Typora Replacement Icon'}
-    ]
 
     let iconWorks = [
         { src: 'images/works/icons/sticker-icons.png', alt: 'Sticker Icons'},
@@ -95,19 +56,16 @@
     </SectionCard>
 
     <SectionCard title="Icons" icon="image-filled">
-        <div class="siema">
+        <div class="tab-panels-container">
             {#each iconWorks as { src, alt}, i }
-                <img {src} {alt} />
+            <div class="tab-panel">
+                <div class="tab-panel-content">
+                    <ImageLoader {src} {alt} />
+                </div>    
+            </div>
             {/each}
         </div>
     </SectionCard>
-    <!-- <SectionCard title="Icons" icon="image-filled">
-        <div class="siema">
-            {#each iconWorks as { src, alt}, i }
-                <ImageLoader {src} {alt} />
-            {/each}
-        </div>
-    </SectionCard> -->
  
     <SectionCard title="Utilities" icon="pencil-filled">
         <p class="utilities-content">
@@ -139,6 +97,31 @@
 </section>
 
 <style>
+    .tab-panels-container {
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+		overflow-x: scroll;
+		display: flex;
+	}
+	
+	/* .tab-panel-content {
+		margin: auto;
+	} */
+
+	.tab-panel {
+    scroll-snap-align: start;
+    /* only supported in Chrome */
+    scroll-snap-stop: always;
+		width: 100%;
+		flex: 1 0 auto;
+		height: auto;
+		display: flex;
+        margin-right: 1rem;
+}
+
+
+
+
     .intro {
         padding: 1.25rem;
         margin-bottom: 1rem;
@@ -177,9 +160,5 @@
     }
     .utility-card:not(:last-child) {
         margin-bottom: 1rem;
-    }
-    img {
-        width: 100%;
-        height: auto;
     }
 </style>
