@@ -37,9 +37,9 @@
     </section>
 
     <SectionCard title='Recent work' icon='clock-filled'>
-        <svg width="295" height="221" viewBox="0 0 295 221" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="coming-soon" width="295" height="221" viewBox="0 0 295 221" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_128_5908)">
-            <rect width="295" height="221" rx="8" fill="#E0E9FF"/>
+            <rect width="295" height="221" fill="#E0E9FF"/>
             <path d="M32 64V227C32 229.209 33.7909 231 36 231H304C306.209 231 308 229.209 308 227V64M32 64V36C32 33.7909 33.7909 32 36 32H304C306.209 32 308 33.7909 308 36V64M32 64H308" stroke="#0044FF" stroke-opacity="0.12" stroke-width="2"/>
             <circle cx="48" cy="48" r="4" fill="#0044FF" fill-opacity="0.12"/>
             <circle cx="60" cy="48" r="4" fill="#0044FF" fill-opacity="0.12"/>
@@ -49,10 +49,10 @@
             </g>
             <defs>
             <clipPath id="clip0_128_5908">
-            <rect width="295" height="221" rx="8" fill="white"/>
+            <rect width="295" height="221" fill="white"/>
             </clipPath>
             </defs>
-            </svg>
+            </svg>            
     </SectionCard>
 
     <SectionCard title="Icons" icon="image-filled">
@@ -97,6 +97,11 @@
 </section>
 
 <style>
+    .coming-soon {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
     .tab-panels-container {
 		scroll-snap-type: x mandatory;
 		-webkit-overflow-scrolling: touch;
