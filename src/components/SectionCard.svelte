@@ -1,6 +1,6 @@
 <script lang="ts">
-    export let title:String = ''
-    export let icon:String = ''
+    export let title:string = ''
+    export let icon:string = ''
 </script>
 
 <section class="card">

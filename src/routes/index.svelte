@@ -7,9 +7,9 @@
 
     let iconWorks = [
         { src: 'images/works/icons/sticker-icons.png', alt: 'Sticker Icons'},
-        { src: 'images/works/icons/1px-line-icons.png', alt: '1px Line Icons'},
         { src: 'images/works/icons/design-icons.png', alt: 'Design Tools Icons'},
         { src: 'images/works/icons/location-types.png', alt: 'Location Types Icons'},
+        { src: 'images/works/icons/1px-line-icons.png', alt: '1px Line Icons'},
         { src: 'images/works/icons/building-icons.png', alt: 'Building and Tools Icons'},
         { src: 'images/works/icons/tools-icons.png', alt: 'Tool Icons'},
         { src: 'images/works/icons/accessibility-icons-grid.png', alt: 'Accessibility Icons'},
@@ -109,18 +109,14 @@
 	} */
 
 	.tab-panel {
-    scroll-snap-align: start;
-    /* only supported in Chrome */
-    scroll-snap-stop: always;
-		width: 100%;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+		width: 90%;
 		flex: 1 0 auto;
 		height: auto;
 		display: flex;
         margin-right: 1rem;
-}
-
-
-
+    }
 
     .intro {
         padding: 1.25rem;
