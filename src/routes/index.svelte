@@ -8,7 +8,7 @@
     import Siema from 'siema';
     import { onMount } from 'svelte';
     onMount(()=>{
-        const mySiema = new Siema({
+        new Siema({
             duration: 400,
             easing: 'ease-in-out',
             perPage: 1,
@@ -16,9 +16,6 @@
             multipleDrag: false,
             loop: true,
         });
-        setInterval(() => {
-            mySiema.next(1);
-  }, 3000)
     })
 
     let images = [
@@ -45,6 +42,25 @@
         { src: 'images/purple-icons.png', alt: 'Crocs-inspired Icons'},
         { src: 'images/ratio-app.png', alt: 'Ratio App UI'},
         { src: 'images/typora-replacement-icon.png', alt: 'Typora Replacement Icon'}
+    ]
+
+    let iconWorks = [
+        { src: 'images/works/icons/sticker-icons.png', alt: 'Sticker Icons'},
+        { src: 'images/works/icons/1px-line-icons.png', alt: '1px Line Icons'},
+        { src: 'images/works/icons/design-icons.png', alt: 'Design Tools Icons'},
+        { src: 'images/works/icons/location-types.png', alt: 'Location Types Icons'},
+        { src: 'images/works/icons/building-icons.png', alt: 'Building and Tools Icons'},
+        { src: 'images/works/icons/tools-icons.png', alt: 'Tool Icons'},
+        { src: 'images/works/icons/accessibility-icons-grid.png', alt: 'Accessibility Icons'},
+        { src: 'images/works/icons/music-icons.png', alt: 'Music Player Icons'},
+        { src: 'images/works/icons/colorful-icons.png', alt: 'Colorful Icons'},
+        { src: 'images/works/icons/sharp-icons.png', alt: 'Small Sharp Icons'},
+        { src: 'images/works/icons/dm-icon-set.png', alt: 'Sharp Thin Icons'},
+        { src: 'images/works/icons/happy-avatar-icon.png', alt: 'Happy Avatar Icon'},
+        { src: 'images/works/icons/pinterest-style-icons.png', alt: 'Pinterest-style Icons'},
+        { src: 'images/works/icons/playstation-icons.png', alt: 'Playstation Icon Exploration'},
+        { src: 'images/works/icons/presentation-icons.png', alt: 'Personal Presentation Icons'},
+        { src: 'images/works/icons/purple-icons.png', alt: 'Crocs-inspired Icons'}
     ]
 </script>
 
@@ -80,11 +96,18 @@
 
     <SectionCard title="Icons" icon="image-filled">
         <div class="siema">
-            {#each images as { src, alt}, i }
-                <ImageLoader {src} {alt} />
+            {#each iconWorks as { src, alt}, i }
+                <img {src} {alt} />
             {/each}
         </div>
     </SectionCard>
+    <!-- <SectionCard title="Icons" icon="image-filled">
+        <div class="siema">
+            {#each iconWorks as { src, alt}, i }
+                <ImageLoader {src} {alt} />
+            {/each}
+        </div>
+    </SectionCard> -->
  
     <SectionCard title="Utilities" icon="pencil-filled">
         <p class="utilities-content">
@@ -154,5 +177,9 @@
     }
     .utility-card:not(:last-child) {
         margin-bottom: 1rem;
+    }
+    img {
+        width: 100%;
+        height: auto;
     }
 </style>
