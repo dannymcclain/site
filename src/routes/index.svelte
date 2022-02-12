@@ -60,7 +60,8 @@
             {#each iconWorks as { src, alt}, i }
             <div class="tab-panel">
                 <div class="tab-panel-content">
-                    <ImageLoader {src} {alt} />
+                    <!-- <ImageLoader {src} {alt} /> -->
+                    <img class="works" {src} {alt} />
                 </div>    
             </div>
             {/each}
@@ -98,6 +99,11 @@
 </section>
 
 <style>
+    .works {
+        width: 100%;
+        height: auto; 
+        border-radius: 8px;
+    }
     .coming-soon {
         width: 100%;
         height: auto;
@@ -113,12 +119,9 @@
 	.tab-panel {
         padding: 1.5rem 0 1.5rem 1.5rem;
 	}
-    /* .tab-panel:last-child {
-        padding-right: 1.5rem;
-    } */
 
     /* .tab-panel:first-child {
-        margin-left: 1.5rem;
+        padding-left: 1.5rem;
     } */
 	.tab-panel {
         scroll-snap-align: start;
