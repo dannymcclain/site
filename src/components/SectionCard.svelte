@@ -38,15 +38,12 @@
         margin-right: .5rem;
     }
 
-    /* h2 {
-        font-style: normal;
-        font-weight: 900;
-        font-size: 12px;
-        line-height: 12px;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-    } */
     .content {
         padding: 1.5rem;
+    }
+    @media screen and (min-width: 769px) { 
+        .content {
+            padding: 3rem;
+        }
     }
 </style>

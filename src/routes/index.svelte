@@ -65,7 +65,7 @@
                 </div>    
             </div>
             {/each}
-            <div class="tab-panel" style="width: 1.5rem"></div>
+            <span class="tab-panel layout-hack"></span>
         </div>
     </SectionCard>
  
@@ -73,19 +73,19 @@
         <p class="utilities-content">
             As someone primarily designing for the web, I like to explore the technologies that bring my designs to life. Here are a few small projects I've built to satisfy my own curiosity and speed up my workflow. Always more in the works.
         </p>
-        <a class="utility-card" href="/" target="_blank">
+        <a class="utility-card" href="https://www.figma.com/community/plugin/917796239623005893/Fitter" target="_blank">
             Fitter
             <span class="body-small">
                 A tiny Figma plugin that resizes an item to fit its parent's width, height, or both.
             </span>
         </a>
-        <a class="utility-card" href="/" target="_blank">
+        <a class="utility-card" href="https://ratio.dannymcclain.com/" target="_blank">
             Ratio
             <span class="body-small">
                 A quick, dead-simple proportion calculator made with Svelte.
             </span>
         </a>
-        <a class="utility-card" href="/" target="_blank">
+        <a class="utility-card" href="https://gridfinder.dannymcclain.com/" target="_blank">
             Grid Finder
             <span class="body-small">
                 A tool to help you calculate perfect grids with whole values. (Plugin version in development.)
@@ -99,6 +99,26 @@
 </section>
 
 <style>
+
+.intro {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+@media screen and (min-width: 769px) {
+    .intro {
+        padding: 2rem;
+        margin-bottom: 1.25rem;
+    }
+}    
+h1 {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        letter-spacing: -0.02em;
+        margin-bottom: 1rem;
+    }
+
     .coming-soon {
         width: 100%;
         height: auto;
@@ -120,23 +140,22 @@
 		display: flex;
         padding: 1.5rem 0 1.5rem 1.5rem;
     }
+    .layout-hack {
+        width: 1.5rem
+    }
+    @media screen and (min-width: 769px){
+        .tab-panel {
+            padding: 3rem 0 3rem 3rem;
+        }
+        .layout-hack {
+            width: 3rem;
+        }
+
+    }
     .works {
         width: 100%;
         height: auto; 
         border-radius: 8px;
-    }
-
-    .intro {
-        padding: 1.25rem;
-        margin-bottom: 1rem;
-    }
-    h1 {
-        font-style: normal;
-        font-weight: 900;
-        font-size: 2rem;
-        line-height: 2.5rem;
-        letter-spacing: -0.02em;
-        margin-bottom: 1rem;
     }
     
     .utilities-content {
