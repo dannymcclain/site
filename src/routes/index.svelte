@@ -138,7 +138,7 @@
 	.tab-panel {
         scroll-snap-align: start;
         scroll-snap-stop: always;
-		width: 80%;
+		width: 90%;
 		flex: 1 0 auto;
 		height: auto;
 		display: flex;
