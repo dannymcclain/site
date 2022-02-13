@@ -29,9 +29,10 @@
     }
     img {
       opacity: 0;
-      transition: opacity 1000ms ease-in;
+      transition: opacity 800ms ease-in;
       width: 100%;
       height: auto;
+      border-radius: 8px;
     }
     img.loaded {
       opacity: 1;
