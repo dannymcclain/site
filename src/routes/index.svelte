@@ -140,7 +140,7 @@
 		flex: 1 0 auto;
 		height: auto;
 		display: flex;
-        padding-right: 1.5rem;
+        /* padding-right: 1.5rem; */
     }
     .tab-panel-content {
         display: flex;
@@ -149,9 +149,15 @@
     .works {
         width: 100%;
         height: auto; 
-        border-radius: 8px;
+        /* border-radius: 8px; */
         margin: 0;
         padding: 0;
+    }
+    .tab-panel:first-child .works {
+        border-radius: .5rem 0 0 .5rem;
+    }
+    .tab-panel:last-child .works {
+        border-radius: 0 .5rem .5rem 0;
     }
     
     .utilities-content {
