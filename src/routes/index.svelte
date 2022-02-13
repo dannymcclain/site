@@ -58,7 +58,7 @@
             </svg>            
     </SectionCard>
 
-    <SectionCard title="Icons" icon="image-filled" style="padding: 0;">
+    <SectionCard title="Icons" icon="image-filled">
         <div class="tab-panels-container">
             {#each iconImages as { src, alt}, i }
             <div class="tab-panel">
@@ -67,7 +67,6 @@
                 </div>    
             </div>
             {/each}
-            <span class="tab-panel layout-hack"></span>
         </div>
     </SectionCard>
  
@@ -102,17 +101,17 @@
 
 <style>
 
-.intro {
-        padding: 1.25rem;
-        margin-bottom: 1rem;
-    }
+    .intro {
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
 @media screen and (min-width: 769px) {
     .intro {
         padding: 2rem;
         margin-bottom: 1.25rem;
     }
 }    
-h1 {
+    h1 {
         font-style: normal;
         font-weight: 900;
         font-size: 2rem;
@@ -126,6 +125,7 @@ h1 {
         height: auto;
         border-radius: 8px;
     }
+
     .tab-panels-container {
 		scroll-snap-type: x mandatory;
 		-webkit-overflow-scrolling: touch;
@@ -140,20 +140,12 @@ h1 {
 		flex: 1 0 auto;
 		height: auto;
 		display: flex;
-        padding: 1.5rem 0 1.5rem 1.5rem;
+        padding-right: 1.5rem;
     }
-    .layout-hack {
-        width: 1.5rem
+    .tab-panel-content {
+        display: flex;
     }
-    @media screen and (min-width: 769px){
-        .tab-panel {
-            padding: 3rem 0 3rem 3rem;
-        }
-        .layout-hack {
-            width: 3rem;
-        }
 
-    }
     .works {
         width: 100%;
         height: auto; 
