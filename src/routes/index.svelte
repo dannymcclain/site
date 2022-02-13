@@ -104,13 +104,15 @@
     .intro {
             padding: 1.25rem;
             margin-bottom: 1rem;
-        }
-@media screen and (min-width: 769px) {
-    .intro {
-        padding: 2rem;
-        margin-bottom: 1.25rem;
     }
-}    
+
+    @media screen and (min-width: 769px) {
+        .intro {
+            padding: 2rem;
+            margin-bottom: 1.25rem;
+        }
+    }
+
     h1 {
         font-style: normal;
         font-weight: 900;
@@ -141,9 +143,10 @@
 		height: auto;
 		display: flex;
     }
+
     .tab-panel-content {
         display: flex;
-        margin-right: 1.5rem;
+        margin-right: 1rem;
     }
 
     .works {
@@ -153,13 +156,11 @@
         margin: 0;
         padding: 0;
     }
-    .tab-panel:last-child .tab-panel-content {
-        margin-right: 0;
-    }
     
     .utilities-content {
         margin-bottom: 1.5rem;
     }
+
     .utility-card {
         display: flex;
         flex-direction: column;
@@ -173,13 +174,16 @@
         font-weight: 700;
         transition: background-color 125ms linear, border-color 125ms linear, color 125ms linear;
     }
+
     .utility-card span {
         font-weight: 500;
     }
+
     .utility-card:hover {
         background-color: var(--accent);
         border-color: var(--accent);
     }
+    
     .utility-card:not(:last-child) {
         margin-bottom: 1rem;
     }
