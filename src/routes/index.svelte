@@ -5,23 +5,26 @@
     import SectionCard from '../components/SectionCard.svelte'
     import { src_url_equal } from 'svelte/internal';
 
-    let iconWorks = [
-        { src: 'images/works/icons/sticker-icons.png', alt: 'Sticker Icons'},
-        { src: 'images/works/icons/design-icons.png', alt: 'Design Tools Icons'},
-        { src: 'images/works/icons/location-types.png', alt: 'Location Types Icons'},
-        { src: 'images/works/icons/1px-line-icons.png', alt: '1px Line Icons'},
-        { src: 'images/works/icons/building-icons.png', alt: 'Building and Tools Icons'},
-        { src: 'images/works/icons/tools-icons.png', alt: 'Tool Icons'},
-        { src: 'images/works/icons/accessibility-icons-grid.png', alt: 'Accessibility Icons'},
-        { src: 'images/works/icons/music-icons.png', alt: 'Music Player Icons'},
-        { src: 'images/works/icons/colorful-icons.png', alt: 'Colorful Icons'},
-        { src: 'images/works/icons/sharp-icons.png', alt: 'Small Sharp Icons'},
-        { src: 'images/works/icons/dm-icon-set.png', alt: 'Sharp Thin Icons'},
-        { src: 'images/works/icons/happy-avatar-icon.png', alt: 'Happy Avatar Icon'},
-        { src: 'images/works/icons/pinterest-style-icons.png', alt: 'Pinterest-style Icons'},
-        { src: 'images/works/icons/playstation-icons.png', alt: 'Playstation Icon Exploration'},
-        { src: 'images/works/icons/presentation-icons.png', alt: 'Personal Presentation Icons'},
-        { src: 'images/works/icons/purple-icons.png', alt: 'Crocs-inspired Icons'}
+    let iconImages = [
+        { src: 'images/sticker-icons.png', alt: 'Sticker Icons'},
+        { src: 'images/design-icons.png', alt: 'Design Tools Icons'},
+        { src: 'images/location-types.png', alt: 'Location Types Icons'},
+        { src: 'images/1px-line-icons.png', alt: '1px Line Icons'},
+        { src: 'images/building-icons.png', alt: 'Building and Tools Icons'},
+        { src: 'images/tools-icons.png', alt: 'Tool Icons'},
+        { src: 'images/accessibility-icons-grid.png', alt: 'Accessibility Icons'},
+        { src: 'images/music-icons.png', alt: 'Music Player Icons'},
+        { src: 'images/colorful-icons.png', alt: 'Colorful Icons'},
+        { src: 'images/sharp-icons.png', alt: 'Small Sharp Icons'},
+        { src: 'images/dm-icon-set.png', alt: 'Sharp Thin Icons'},
+        { src: 'images/dm-icon-set-detail.png', alt: 'Detail of Sharp Thin Icons'},
+        { src: 'images/happy-avatar-icon.png', alt: 'Happy Avatar Icon'},
+        { src: 'images/pinterest-style-icons.png', alt: 'Pinterest-style Icons'},
+        { src: 'images/pinterest-style-icons-detail.png', alt: 'Detail of Pinterest-style Icons'},
+        { src: 'images/playstation-icons.png', alt: 'Playstation Icon Exploration'},
+        { src: 'images/presentation-icons.png', alt: 'Personal Presentation Icons'},
+        { src: 'images/presentation-icons-detail.png', alt: 'Detail of Personal Presentation Icons'},
+        { src: 'images/purple-icons.png', alt: 'Crocs-inspired Icons'}
     ]
 </script>
 
@@ -55,17 +58,15 @@
             </svg>            
     </SectionCard>
 
-    <SectionCard title="Icons" icon="image-filled" style="padding: 0;">
+    <SectionCard title="Icons" icon="image-filled">
         <div class="tab-panels-container">
-            {#each iconWorks as { src, alt}, i }
+            {#each iconImages as { src, alt}, i }
             <div class="tab-panel">
                 <div class="tab-panel-content">
-                    <!-- <ImageLoader {src} {alt} /> -->
                     <img class="works" {src} {alt} />
                 </div>    
             </div>
             {/each}
-            <span class="tab-panel layout-hack"></span>
         </div>
     </SectionCard>
  
@@ -100,17 +101,19 @@
 
 <style>
 
-.intro {
-        padding: 1.25rem;
-        margin-bottom: 1rem;
-    }
-@media screen and (min-width: 769px) {
     .intro {
-        padding: 2rem;
-        margin-bottom: 1.25rem;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
     }
-}    
-h1 {
+
+    @media screen and (min-width: 769px) {
+        .intro {
+            padding: 2rem;
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    h1 {
         font-style: normal;
         font-weight: 900;
         font-size: 2rem;
@@ -124,6 +127,7 @@ h1 {
         height: auto;
         border-radius: 8px;
     }
+
     .tab-panels-container {
 		scroll-snap-type: x mandatory;
 		-webkit-overflow-scrolling: touch;
@@ -138,29 +142,25 @@ h1 {
 		flex: 1 0 auto;
 		height: auto;
 		display: flex;
-        padding: 1.5rem 0 1.5rem 1.5rem;
     }
-    .layout-hack {
-        width: 1.5rem
-    }
-    @media screen and (min-width: 769px){
-        .tab-panel {
-            padding: 3rem 0 3rem 3rem;
-        }
-        .layout-hack {
-            width: 3rem;
-        }
 
+    .tab-panel-content {
+        display: flex;
+        margin-right: 1rem;
     }
+
     .works {
         width: 100%;
         height: auto; 
         border-radius: 8px;
+        margin: 0;
+        padding: 0;
     }
     
     .utilities-content {
         margin-bottom: 1.5rem;
     }
+
     .utility-card {
         display: flex;
         flex-direction: column;
@@ -174,13 +174,16 @@ h1 {
         font-weight: 700;
         transition: background-color 125ms linear, border-color 125ms linear, color 125ms linear;
     }
+
     .utility-card span {
         font-weight: 500;
     }
+
     .utility-card:hover {
         background-color: var(--accent);
         border-color: var(--accent);
     }
+    
     .utility-card:not(:last-child) {
         margin-bottom: 1rem;
     }
