@@ -5,23 +5,26 @@
     import SectionCard from '../components/SectionCard.svelte'
     import { src_url_equal } from 'svelte/internal';
 
-    let iconWorks = [
-        { src: 'images/works/icons/sticker-icons.png', alt: 'Sticker Icons'},
-        { src: 'images/works/icons/design-icons.png', alt: 'Design Tools Icons'},
-        { src: 'images/works/icons/location-types.png', alt: 'Location Types Icons'},
-        { src: 'images/works/icons/1px-line-icons.png', alt: '1px Line Icons'},
-        { src: 'images/works/icons/building-icons.png', alt: 'Building and Tools Icons'},
-        { src: 'images/works/icons/tools-icons.png', alt: 'Tool Icons'},
-        { src: 'images/works/icons/accessibility-icons-grid.png', alt: 'Accessibility Icons'},
-        { src: 'images/works/icons/music-icons.png', alt: 'Music Player Icons'},
-        { src: 'images/works/icons/colorful-icons.png', alt: 'Colorful Icons'},
-        { src: 'images/works/icons/sharp-icons.png', alt: 'Small Sharp Icons'},
-        { src: 'images/works/icons/dm-icon-set.png', alt: 'Sharp Thin Icons'},
-        { src: 'images/works/icons/happy-avatar-icon.png', alt: 'Happy Avatar Icon'},
-        { src: 'images/works/icons/pinterest-style-icons.png', alt: 'Pinterest-style Icons'},
-        { src: 'images/works/icons/playstation-icons.png', alt: 'Playstation Icon Exploration'},
-        { src: 'images/works/icons/presentation-icons.png', alt: 'Personal Presentation Icons'},
-        { src: 'images/works/icons/purple-icons.png', alt: 'Crocs-inspired Icons'}
+    let iconImages = [
+        { src: 'images/sticker-icons.png', alt: 'Sticker Icons'},
+        { src: 'images/design-icons.png', alt: 'Design Tools Icons'},
+        { src: 'images/location-types.png', alt: 'Location Types Icons'},
+        { src: 'images/1px-line-icons.png', alt: '1px Line Icons'},
+        { src: 'images/building-icons.png', alt: 'Building and Tools Icons'},
+        { src: 'images/tools-icons.png', alt: 'Tool Icons'},
+        { src: 'images/accessibility-icons-grid.png', alt: 'Accessibility Icons'},
+        { src: 'images/music-icons.png', alt: 'Music Player Icons'},
+        { src: 'images/colorful-icons.png', alt: 'Colorful Icons'},
+        { src: 'images/sharp-icons.png', alt: 'Small Sharp Icons'},
+        { src: 'images/dm-icon-set.png', alt: 'Sharp Thin Icons'},
+        { src: 'images/dm-icon-set-detail.png', alt: 'Detail of Sharp Thin Icons'},
+        { src: 'images/happy-avatar-icon.png', alt: 'Happy Avatar Icon'},
+        { src: 'images/pinterest-style-icons.png', alt: 'Pinterest-style Icons'},
+        { src: 'images/pinterest-style-icons-detail.png', alt: 'Detail of Pinterest-style Icons'},
+        { src: 'images/playstation-icons.png', alt: 'Playstation Icon Exploration'},
+        { src: 'images/presentation-icons.png', alt: 'Personal Presentation Icons'},
+        { src: 'images/presentation-icons-detail.png', alt: 'Detail of Personal Presentation Icons'},
+        { src: 'images/purple-icons.png', alt: 'Crocs-inspired Icons'}
     ]
 </script>
 
@@ -57,10 +60,9 @@
 
     <SectionCard title="Icons" icon="image-filled" style="padding: 0;">
         <div class="tab-panels-container">
-            {#each iconWorks as { src, alt}, i }
+            {#each iconImages as { src, alt}, i }
             <div class="tab-panel">
                 <div class="tab-panel-content">
-                    <!-- <ImageLoader {src} {alt} /> -->
                     <img class="works" {src} {alt} />
                 </div>    
             </div>
@@ -156,6 +158,8 @@ h1 {
         width: 100%;
         height: auto; 
         border-radius: 8px;
+        margin: 0;
+        padding: 0;
     }
     
     .utilities-content {

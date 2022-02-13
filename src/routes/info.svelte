@@ -73,7 +73,7 @@
        </p>
    </SectionCard>
    <SectionCard title="Colophon" icon="pencil-filled">
-       <p>This site is set in <a href="https://www.fontshare.com/fonts/satoshi" target="_blank">Satoshi</a> (or your OS's system font). It was built using <a href="https://kit.svelte.dev" target="_blank">Sveltekit</a> and deployed/hosted with <a href="https://vercel.com/" target="_blank">Vercel</a> and <a href="https://github.com/" target="_blank">GitHub</a>. </p>
+       <p>This site is set in <a href="https://www.fontshare.com/fonts/satoshi" target="_blank">Satoshi</a>, or if something's gone wrong, your OS's system font. It was built using <a href="https://kit.svelte.dev" target="_blank">Sveltekit</a> and deployed/hosted with <a href="https://vercel.com/" target="_blank">Vercel</a> and <a href="https://github.com/" target="_blank">GitHub</a>. </p>
    </SectionCard> 
 
 </div>
