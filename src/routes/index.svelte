@@ -199,7 +199,7 @@
     }
 
     .projects li {
-        margin: 0 0 .5rem 1.5rem;
+        margin: 0 0 .5rem 1rem;
     }
 
     .projects li:last-child {
@@ -211,8 +211,8 @@
         color: var(--accent-12);
         /* font-weight: bold; */
         display: inline-block;
-        width: 1.5rem;
-        margin-left: -1.5rem;
+        width: 1rem;
+        margin-left: -1rem;
     }
 
     .utility-card {
