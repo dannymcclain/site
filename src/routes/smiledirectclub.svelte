@@ -22,8 +22,7 @@
 </script>
 
 <section 
-    in:fade="{{ delay: 300, duration: 300, easing: quadInOut}}"
-    out:fade="{{ duration: 150, easing: quadInOut}}"
+    in:fade="{{ duration: 500, delay: 250, easing: quadInOut}}"
     >
     <SectionCard title="SmileDirectClub" icon="smile-filled">
         <p class="body-large">Creating a design system from the ground up during a major replatform was no easy task.</p>

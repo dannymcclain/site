@@ -22,8 +22,7 @@
 </script>
 
 <section 
-    in:fade="{{ delay: 300, duration: 300, easing: quadInOut}}"
-    out:fade="{{ duration: 150, easing: quadInOut}}"
+    in:fade="{{ duration: 500, delay: 250, easing: quadInOut}}"
     >
     <SectionCard title="Icons" icon="image-filled">
         <p class="body-large">

@@ -7,8 +7,7 @@
 
 
 <section 
-    in:fade="{{ delay: 300, duration: 300, easing: quadInOut}}"
-    out:fade="{{ duration: 150, easing: quadInOut}}"
+    in:fade="{{ duration: 500, delay: 250, easing: quadInOut}}"
     >
     <SectionCard title="About me" icon="person-heading">
         <figure><img src="portrait.png" alt="A portriat of me by Cymone Wilder" /></figure>
