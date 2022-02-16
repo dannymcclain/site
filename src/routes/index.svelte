@@ -83,13 +83,13 @@
                 A tiny Figma plugin that resizes an item to fit its parent's width, height, or both.
             </span>
         </a>
-        <a class="utility-card" href="https://ratio.dannymcclain.com/" target="_blank">
+        <a class="utility-card" href="https://ratio.dannymccla.in" target="_blank">
             Ratio
             <span class="body-small">
                 A quick, dead-simple proportion calculator made with Svelte.
             </span>
         </a>
-        <a class="utility-card" href="https://gridfinder.dannymcclain.com/" target="_blank">
+        <a class="utility-card" href="https://gridfinder.dannymccla.in" target="_blank">
             Grid Finder
             <span class="body-small">
                 A tool to help you calculate perfect grids with whole values. (Plugin version in development.)
