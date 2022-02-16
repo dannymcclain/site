@@ -66,7 +66,7 @@
 
     main {
         padding: 0 1rem;
-        max-width: 720px;
+        max-width: 650px;
         margin: 0 auto;
     }
 
@@ -87,17 +87,6 @@
         align-items: center;
         padding: 1.5rem 1.5rem 3rem;
     }
-
-    footer svg {
-        margin-bottom: .75rem;
-    }
-
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
     
     footer .eyebrow {
         margin-bottom: .25rem;
@@ -111,12 +100,7 @@
 <main>
     <slot></slot>
     <footer>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use href="icons.svg#smile"></use>
-        </svg>
-        <div class="footer-content">
-            <p class="eyebrow">Be kind · have fun · Stay safe</p>
-            <p class="body-small">© Danny McClain 2022</p>
-        </div>
+        <p class="eyebrow">Be kind · have fun · Stay safe</p>
+        <p class="body-small">© Danny McClain 2022</p>
     </footer>
 </main>
