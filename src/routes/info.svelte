@@ -6,9 +6,8 @@
 </script>
 
 
-<div 
-    in:fade="{{ delay: 300, duration: 300, easing: quadInOut}}"
-    out:fade="{{ duration: 150, easing: quadInOut}}"
+<section 
+    in:fade="{{ duration: 500, delay: 250, easing: quadInOut}}"
     >
     <SectionCard title="About me" icon="person-heading">
         <figure><img src="portrait.png" alt="A portriat of me by Cymone Wilder" /></figure>
@@ -73,10 +72,10 @@
        </p>
    </SectionCard>
    <SectionCard title="Colophon" icon="pencil-filled">
-       <p>This site is set in <a href="https://www.fontshare.com/fonts/satoshi" target="_blank">Satoshi</a>, or if something's gone wrong, your OS's system font. It was built using <a href="https://kit.svelte.dev" target="_blank">Sveltekit</a> and deployed/hosted with <a href="https://vercel.com/" target="_blank">Vercel</a> and <a href="https://github.com/" target="_blank">GitHub</a>. </p>
+       <p>This site is set in <a href="https://www.fontshare.com/fonts/satoshi" target="_blank">Satoshi</a>, or if something's gone wrong, your OS's system font. It was built using <a href="https://kit.svelte.dev" target="_blank">Sveltekit</a> and deployed/hosted with <a href="https://vercel.com/" target="_blank">Vercel</a> and <a href="https://github.com/dannymcclain/site" target="_blank">GitHub</a>.</p>
    </SectionCard> 
 
-</div>
+</section>
 
 <style>
     p:not(:last-child) {
@@ -89,6 +88,7 @@
         grid-template-columns: 1fr 1fr;
         grid-gap: 1rem;
     }
+
     ul li {
         width: 100%;
     }
@@ -105,6 +105,7 @@
         justify-content: center;
         align-items: center;
     }
+
     img {
         width: 136px;
         height: 136px;
