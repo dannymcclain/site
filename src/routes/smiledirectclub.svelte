@@ -1,5 +1,6 @@
 <script>
     import SectionCard from '../components/SectionCard.svelte'
+    import Button from '../components/Button.svelte'
     import { fade } from 'svelte/transition'
     import { quadInOut } from 'svelte/easing'
 
@@ -25,10 +26,13 @@
     in:fade="{{ duration: 500, delay: 250, easing: quadInOut}}"
     >
     <SectionCard title="SmileDirectClub" icon="smile-filled">
-        <p class="body-large">Creating a design system from the ground up during a major replatform was no easy task.</p>
-
+        <p class="body-large">Creating a design system from the ground up during a major replatform was no easy task, but it was one that I was happy to lead.</p>
+          
+        <aside class="body-small">
+            I'll gladly walk through my work upon request. <a href='mailto:dannymcclainstudio@gmail.com'>Email me</a> to schedule a chat.
+        </aside>
         <p>
-            But it was one that I was happy to lead. SmileDirectClub's website architecture was outdated and a huge hinderance to designers, developers, and project owners across the company. Due to a variety of limitations, the divide between design handoff and implementation left something to be desired.
+            SmileDirectClub's website architecture was outdated and a huge hinderance to designers, developers, and project owners across the company. Due to a variety of limitations, the divide between design handoff and implementation left something to be desired.
         </p>
 
         <p>
@@ -74,10 +78,6 @@
                 {sdcImages[3].alt}
             </figcaption>
         </figure>
-        
-        <p>
-            I'm happy to walkthrough my work upon request. <a href="mailto:dannymcclainstudio@gmail.com">Email me</a> to schedule a chat.
-        </p>
         
         <figure>
             <img src={sdcImages[4].src} alt={sdcImages[4].alt} />
