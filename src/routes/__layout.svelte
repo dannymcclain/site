@@ -1,27 +1,49 @@
 <script>
     import Button from '../components/Button.svelte'
     import '../satoshi.css'
+
+    import {fade} from 'svelte/transition'
+    // import {easeInOut} from 'svelte/easing'
     import {onMount} from 'svelte'
 
     let navHeight;
-    let scrollY;
+    let scrollY = 0;
+    let visible = true;
 
     
     onMount(()=>{
         // console.log(navHeight);
     })
     
+    function hasScrolled() {
+        if (scrollY <= 16){
+        visible = true;
+        console.log('True');
+    } else {
+        visible = false;
+        console.log('False');
+    }}
 </script>
-<svelte:window bind:scrollY={scrollY}/>
+<svelte:window bind:scrollY={scrollY} on:scroll={hasScrolled} />
 
-<nav bind:clientHeight={navHeight}>
-    {#if scrollY <= 0}
-        <Button style='nav' name='home' label='Home' url='/'></Button>
-        <Button style='nav' name='info' label='Info' url='/info'></Button>
-    {:else}
-        <Button style='nav' name='home' label='' url='/'></Button>
-        <Button style='nav' name='info' label='' url='/info'></Button>
-    {/if}    
+<nav 
+    class={scrollY <= 0 ? '' : 'sticky'}
+    bind:clientHeight={navHeight}
+>
+        <Button style='nav' name='home' url='/'>
+            {#if visible}
+            <span transition:fade="{{duration: 200}}" class="label">
+                Home
+            </span>
+            {/if}
+        </Button>
+        <Button style='nav' name='info' url='/info'>
+            {#if visible}
+            <span transition:fade="{{duration: 200}}" class="label">
+                Info
+            </span>
+            {/if}
+        </Button>  
 </nav>
 
 <main>
@@ -110,6 +132,10 @@
         margin-bottom: 1.5rem;
         padding: 1.5rem;
         background-color: #fff;
+        transition: padding 150ms ease-in-out;
+    }
+    .sticky {
+        padding: 1rem;
     }
 
     footer {
