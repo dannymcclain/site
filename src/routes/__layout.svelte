@@ -1,7 +1,36 @@
 <script>
     import Button from '../components/Button.svelte'
     import '../satoshi.css'
+    import {onMount} from 'svelte'
+
+    let navHeight;
+    let scrollY;
+
+    
+    onMount(()=>{
+        // console.log(navHeight);
+    })
+    
 </script>
+<svelte:window bind:scrollY={scrollY}/>
+
+<nav bind:clientHeight={navHeight}>
+    {#if scrollY <= 0}
+        <Button style='nav' name='home' label='Home' url='/'></Button>
+        <Button style='nav' name='info' label='Info' url='/info'></Button>
+    {:else}
+        <Button style='nav' name='home' label='' url='/'></Button>
+        <Button style='nav' name='info' label='' url='/info'></Button>
+    {/if}    
+</nav>
+
+<main>
+    <slot></slot>
+    <footer>
+        <p class="eyebrow">Be kind · have fun · Stay safe</p>
+        <p class="body-small">© Danny McClain 2022</p>
+    </footer>
+</main>
 
 <style>
     :global(:root){
@@ -95,15 +124,3 @@
         margin-bottom: .25rem;
     }
 </style>
-
-<nav>
-    <Button style='nav' name='home' label='Home' url='/'></Button>
-    <Button style='nav' name='info' label='Info' url='/info'></Button>
-</nav>
-<main>
-    <slot></slot>
-    <footer>
-        <p class="eyebrow">Be kind · have fun · Stay safe</p>
-        <p class="body-small">© Danny McClain 2022</p>
-    </footer>
-</main>
