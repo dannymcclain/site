@@ -2,24 +2,13 @@
     import Button from '../components/Button.svelte'
     import '../satoshi.css'
 
-    import {fade} from 'svelte/transition'
-    // import {easeInOut} from 'svelte/easing'
-    import {onMount} from 'svelte'
 
-    let navHeight;
     let scrollY = 0;
-        
-    onMount(()=>{
-        // console.log(navHeight);
-    })
     
 </script>
 <svelte:window bind:scrollY={scrollY} />
 
-<nav 
-    class={scrollY <= 20 ? '' : 'sticky'}
-    bind:clientHeight={navHeight}
->
+<nav class={scrollY <= 20 ? '' : 'sticky'}>
         <Button style='nav' name='home' url='/' label='Home'></Button>
         <Button style='nav' name='info' url='/info' label='Info'></Button>  
 </nav>
@@ -112,7 +101,7 @@
         padding: 1.5rem;
         background-color: #fff;
         box-shadow: 0 2px 0px transparent;
-        transition: padding 200ms ease-in-out, box-shadow 200ms ease-in-out;
+        transition: padding 150ms cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 150ms cubic-bezier(0.075, 0.82, 0.165, 1);
     }
     .sticky {
         box-shadow: 0 2px 0px rgba(0, 68, 255, 0.08);
