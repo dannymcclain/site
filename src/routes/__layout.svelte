@@ -111,11 +111,11 @@
         margin-bottom: 1.5rem;
         padding: 1.5rem;
         background-color: #fff;
-        border-bottom: 2px solid transparent;
-        transition: padding 200ms ease-in-out, border-color 200ms ease-in-out;
+        box-shadow: 0 2px 0px transparent;
+        transition: padding 200ms ease-in-out, box-shadow 200ms ease-in-out;
     }
     .sticky {
-        border-color: var(--accent-8);
+        box-shadow: 0 2px 0px rgba(0, 68, 255, 0.08);
         padding: 1rem;
     }
 
