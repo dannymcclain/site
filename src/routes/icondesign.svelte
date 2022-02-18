@@ -36,7 +36,6 @@
                 <img class="works" {src} {alt} />
             {/each}
         </div>
-        <p><a href="/">Return to homepage</a></p>
     </SectionCard>
 
 </section>
@@ -46,7 +45,6 @@
         display: flex;
         flex-direction: column;
         gap: .5rem;
-        margin-bottom: 1.5rem;
     }
     img {
         width: 100%;

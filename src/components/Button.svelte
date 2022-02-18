@@ -31,7 +31,7 @@
                 <use href="icons.svg#{name}-filled"></use>
             </svg>
         </div>
-    {label}<slot></slot>
+    {label}
 </a>
 
 <style>   
