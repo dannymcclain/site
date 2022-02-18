@@ -8,42 +8,20 @@
 
     let navHeight;
     let scrollY = 0;
-    let visible = true;
-
-    
+        
     onMount(()=>{
         // console.log(navHeight);
     })
     
-    function hasScrolled() {
-        if (scrollY <= 16){
-        visible = true;
-        console.log('True');
-    } else {
-        visible = false;
-        console.log('False');
-    }}
 </script>
-<svelte:window bind:scrollY={scrollY} on:scroll={hasScrolled} />
+<svelte:window bind:scrollY={scrollY} />
 
 <nav 
-    class={scrollY <= 0 ? '' : 'sticky'}
+    class={scrollY <= 20 ? '' : 'sticky'}
     bind:clientHeight={navHeight}
 >
-        <Button style='nav' name='home' url='/'>
-            {#if visible}
-            <span transition:fade="{{duration: 200}}" class="label">
-                Home
-            </span>
-            {/if}
-        </Button>
-        <Button style='nav' name='info' url='/info'>
-            {#if visible}
-            <span transition:fade="{{duration: 200}}" class="label">
-                Info
-            </span>
-            {/if}
-        </Button>  
+        <Button style='nav' name='home' url='/' label='Home'></Button>
+        <Button style='nav' name='info' url='/info' label='Info'></Button>  
 </nav>
 
 <main>
@@ -122,6 +100,7 @@
     }
 
     nav {
+        z-index: 10;
         position: sticky;
         position: -webkit-sticky;
         top: 0;
@@ -132,9 +111,11 @@
         margin-bottom: 1.5rem;
         padding: 1.5rem;
         background-color: #fff;
-        transition: padding 150ms ease-in-out;
+        border-bottom: 2px solid transparent;
+        transition: padding 200ms ease-in-out, border-color 200ms ease-in-out;
     }
     .sticky {
+        border-color: var(--accent-8);
         padding: 1rem;
     }
 
