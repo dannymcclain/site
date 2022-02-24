@@ -137,7 +137,6 @@
        <p>
         <a href="mailto:dannymcclainstudio@gmail.com">Email me</a> if you're looking for a detail-oriented designer to bridge the gap between design and code and keep files, styles, and processes tidy.
        </p>
-       <p><a href="/">Return to homepage</a></p>
     </SectionCard>
 </section>
 

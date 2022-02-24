@@ -1,7 +1,25 @@
 <script>
     import Button from '../components/Button.svelte'
     import '../satoshi.css'
+
+
+    let scrollY = 0;
+    
 </script>
+<svelte:window bind:scrollY={scrollY} />
+
+<nav class={scrollY <= 20 ? '' : 'sticky'}>
+        <Button style='nav' name='home' url='/' label='Home'></Button>
+        <Button style='nav' name='info' url='/info' label='Info'></Button>  
+</nav>
+
+<main>
+    <slot></slot>
+    <footer>
+        <p class="eyebrow">Be kind · have fun · Stay safe</p>
+        <p class="body-small">© Danny McClain 2022</p>
+    </footer>
+</main>
 
 <style>
     :global(:root){
@@ -71,6 +89,10 @@
     }
 
     nav {
+        z-index: 10;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -78,6 +100,11 @@
         margin-bottom: 1.5rem;
         padding: 1.5rem;
         background-color: #fff;
+        box-shadow: 0 2px 0px transparent;
+        transition: box-shadow 150ms ease-in-out;
+    }
+    .sticky {
+        box-shadow: 0 2px 0px rgba(0, 68, 255, 0.08);
     }
 
     footer {
@@ -92,15 +119,3 @@
         margin-bottom: .25rem;
     }
 </style>
-
-<nav>
-    <Button style='nav' name='home' label='Home' url='/'></Button>
-    <Button style='nav' name='info' label='Info' url='/info'></Button>
-</nav>
-<main>
-    <slot></slot>
-    <footer>
-        <p class="eyebrow">Be kind · have fun · Stay safe</p>
-        <p class="body-small">© Danny McClain 2022</p>
-    </footer>
-</main>
